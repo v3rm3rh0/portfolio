@@ -149,19 +149,22 @@ html { scroll-behavior: smooth;}
     position: relative;
     z-index: 500;
     width: 600px;
-    height: auto;
+    height: 300px;
 }
+/*画像切り替え　土台用意*/
 .WORKS .back_main .works_images .image{
     position: absolute;
     top: 0;
-    left: 0;
+    left: 5%;
     bottom: 0;
     right: 0;
     opacity: 0;
+    border-radius: 8px;
     background-size: cover;
     background-position: center center;
     animation: image_animation 30s infinite;
 }
+/*画像挿入*/
 .WORKS .back_main .works_images .w1{
     background-image: url(work_images/portfolio_1-1.png);
 }
@@ -180,29 +183,31 @@ html { scroll-behavior: smooth;}
 .WORKS .back_main .works_images .w6{
     background-image: url(work_images/kari2.jpeg);
 }
-@keyframes image_animation{
+@keyframes image_animation{/*切り替えトランジッション*/
     0%{ opacity: 0;}
     5%{ opacity: 1;}
     25%{ opacity: 1;}
     30%{ opacity: 0;}
     100%{ opacity: 0;}
 }
-.image:nth-of-type(1) {
+/*５秒ごとに遅れてアニメーション*/
+/*→→１枚5秒間表示ということ*/
+.WORKS .back_main .works_images .image:nth-of-type(1){
     animation-delay: 0s;
 }
-.image:nth-of-type(2) {
+.WORKS .back_main .works_images .image:nth-of-type(2){
     animation-delay: 5s;
 }
-.image:nth-of-type(3) {
+.WORKS .back_main .works_images .image:nth-of-type(3){
     animation-delay: 10s;
 }
-.image:nth-of-type(4) {
+.WORKS .back_main .works_images .image:nth-of-type(4){
     animation-delay: 15s;
 }
-.image:nth-of-type(5) {
+.WORKS .back_main .works_images .image:nth-of-type(5){
     animation-delay: 20s;
 }
-.image:nth-of-type(6) {
+.WORKS .back_main .works_images .image:nth-of-type(6){
     animation-delay: 25s;
 }
 
