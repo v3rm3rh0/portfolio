@@ -281,12 +281,28 @@ html { scroll-behavior: smooth;}
     height: 600px;
     width: 1300px;
 }
-.SKILL .back_main h1{
-    font-size: 50px;
+.SKILL .back_main h1{/*タイトルテキスト*/
+    font-size: 60px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
 }
-
+.SKILL .back_main .skill_text1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    display: flex;
+    left: 13%;
+}
+.SKILL .back_main .skill_02{
+    padding: 0 12em;
+}
+.SKILL .back_main .skill_text2{
+    position: absolute;
+    display: flex;
+    left: 15%;
+}
+.SKILL .back_main .skill_text2 img{
+    padding: 4em 2em;
+}
 
 .ABOUT{
     position: relative;/*親要素にrelativeで親基準で小要素を配置できる*/
