@@ -354,14 +354,34 @@ html { scroll-behavior: smooth;}
     height: 600px;
     width: 1300px;
 }
-.ABOUT .back_main h1{
-    font-size: 50px;
+.ABOUT .back_main h1{/*タイトルテキスト*/
+    font-size: 60px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
 }
-
-
-
+.ABOUT .back_main .about_contents img{/*画像*/
+    position: absolute;
+    left: 10%;
+}
+.ABOUT .back_main .about_text{/*位置*/
+    position: relative;
+    left: 60%;
+    margin-top: -45px;
+}
+.ABOUT .back_main .about_text .t_1{/*テキスト内容*/
+    font-size: 45px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+}
+.ABOUT .back_main .about_text .t_2{/*テキスト日本語サイズ*/
+    font-size: 30px; 
+}
+.ABOUT .back_main .about_contents .about_text2 img{/*位置*/
+    position: relative;
+    display: flexbox;
+    left: 56%;
+    margin-top: 1em;
+    margin-left: 50px;
+}
 
 
 .WORKS_detail{
