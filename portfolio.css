@@ -1,14 +1,11 @@
-
+html { scroll-behavior: smooth;}
 /*ホームアイコン*/
-.HOME{
-    min-height: 7vh;
-}
 .HOME img{
     position: fixed;
     left: 93%;
     z-index: 1000;
     border-radius:70%;
-    border: 2px solid black;
+    border: 2px solid rgb(0, 0, 0);
     /*box-shadow: 3px 3px 0 0 rgba(166, 166, 166, 0.765);*/
 }
 
@@ -29,20 +26,20 @@
     background-image:radial-gradient(#afafaf74 20%, transparent 30%);
     background-size: 20px 20px;
 }
-.HERO .back_02{/*背景赤*/
+.HERO .back_02{/*背景赤後ろ*/
     position: absolute;
     left: 7%;
-    margin-top: 80px;
+    margin-top: 140px;
     z-index: -2;
     background-color: rgb(255, 45, 68);
     border-radius: 5px;
     height: 600px;
     width: 1300px;
 }
-.HERO .back_03{/*背景紫*/
+.HERO .back_03{/*背景前*/
     position: absolute;
     left: 5.5%;
-    margin-top: 60px;
+    margin-top: 120px;
     z-index: -2;
     background-color: rgb(136, 45, 255);
     border-radius: 5px;
@@ -93,3 +90,148 @@
 }
 
 
+.WORKS{
+    position: relative;/*親要素にrelativeで親基準で小要素を配置できる*/
+    min-height: 100vh;
+}
+.WORKS .back_01{/*背景黄色*/
+    position: absolute;
+    left: 2%;
+    top: 7%;
+    z-index: -2;
+    background-color: rgb(255, 255, 84, 0.759);
+    border-radius: 5px;
+    height: 600px;
+    width: 1300px;
+    background-image:radial-gradient(#afafaf74 20%, transparent 30%);
+    background-size: 20px 20px;
+}
+.WORKS .back_02{/*背景後ろ*/
+    position: absolute;
+    left: 7%;
+    margin-top: 140px;
+    z-index: -2;
+    background-color: rgb(75, 72, 88);
+    border-radius: 5px;
+    height: 600px;
+    width: 1300px;
+}
+.WORKS .back_03{/*背景前*/
+    position: absolute;
+    left: 5.5%;
+    margin-top: 120px;
+    z-index: -2;
+    background-color: rgb(232, 49, 49);
+    border-radius: 5px;
+    height: 600px;
+    width: 1300px;
+}
+.WORKS .back_main{/*テキスト背景*/
+    position: absolute;
+    left: 3.5%;
+    top: 13%;
+    z-index: 100;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgba(0, 0, 0, 0.798);
+    border-radius: 3px;
+    height: 600px;
+    width: 1300px;
+}
+
+
+.SKILL{
+    position: relative;/*親要素にrelativeで親基準で小要素を配置できる*/
+    min-height: 100vh;
+}
+.SKILL .back_01{/*背景黄色*/
+    position: absolute;
+    left: 2%;
+    top: 7%;
+    z-index: -2;
+    background-color: rgb(255, 255, 84, 0.759);
+    border-radius: 5px;
+    height: 600px;
+    width: 1300px;
+    background-image:radial-gradient(#afafaf74 20%, transparent 30%);
+    background-size: 20px 20px;
+}
+.SKILL .back_02{/*背景後ろ*/
+    position: absolute;
+    left: 7%;
+    margin-top: 140px;
+    z-index: -2;
+    background-color: rgb(52, 147, 171);
+    border-radius: 5px;
+    height: 600px;
+    width: 1300px;
+}
+.SKILL .back_03{/*背景前*/
+    position: absolute;
+    left: 5.5%;
+    margin-top: 120px;
+    z-index: -2;
+    background-color: rgb(253, 158, 34);
+    border-radius: 5px;
+    height: 600px;
+    width: 1300px;
+}
+.SKILL .back_main{/*テキスト背景*/
+    position: absolute;
+    left: 3.5%;
+    top: 13%;
+    z-index: 100;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgba(0, 0, 0, 0.798);
+    border-radius: 3px;
+    height: 600px;
+    width: 1300px;
+}
+
+
+.ABOUT{
+    position: relative;/*親要素にrelativeで親基準で小要素を配置できる*/
+    min-height: 100vh;
+}
+.ABOUT .back_01{/*背景黄色*/
+    position: absolute;
+    left: 2%;
+    top: 7%;
+    z-index: -2;
+    background-color: rgb(255, 255, 84, 0.759);
+    border-radius: 5px;
+    height: 600px;
+    width: 1300px;
+    background-image:radial-gradient(#afafaf74 20%, transparent 30%);
+    background-size: 20px 20px;
+}
+.ABOUT .back_02{/*背景後ろ*/
+    position: absolute;
+    left: 7%;
+    margin-top: 140px;
+    z-index: -2;
+    background-color: #54AE93;
+    border-radius: 5px;
+    height: 600px;
+    width: 1300px;
+}
+.ABOUT .back_03{/*背景前*/
+    position: absolute;
+    left: 5.5%;
+    margin-top: 120px;
+    z-index: -2;
+    background-color: #20426E;
+    border-radius: 5px;
+    height: 600px;
+    width: 1300px;
+}
+.ABOUT .back_main{/*テキスト背景*/
+    position: absolute;
+    left: 3.5%;
+    top: 13%;
+    z-index: 100;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgba(0, 0, 0, 0.798);
+    border-radius: 3px;
+    height: 600px;
+    width: 1300px;
+}
