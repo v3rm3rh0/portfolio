@@ -9,8 +9,9 @@
     z-index: 1000;
     border-radius:70%;
     border: 2px solid black;
-    box-shadow: 3px 3px 0 0 rgba(166, 166, 166, 0.765);
+    /*box-shadow: 3px 3px 0 0 rgba(166, 166, 166, 0.765);*/
 }
+
 
 /*トップページ*/
 .HERO{
@@ -33,14 +34,24 @@
     left: 7%;
     margin-top: 80px;
     z-index: -2;
-    background-color: rgba(255, 0, 68, 0.759);
+    background-color: rgb(255, 45, 68);
+    border-radius: 5px;
+    height: 600px;
+    width: 1300px;
+}
+.HERO .back_03{/*背景紫*/
+    position: absolute;
+    left: 5.5%;
+    margin-top: 60px;
+    z-index: -2;
+    background-color: rgb(136, 45, 255);
     border-radius: 5px;
     height: 600px;
     width: 1300px;
 }
 .HERO .back_main{/*テキスト背景*/
     position: absolute;
-    left: 4%;
+    left: 3.5%;
     top: 13%;
     z-index: 100;
     background-color: rgb(255, 255, 255);
@@ -60,7 +71,7 @@
     border: 1.5px solid rgb(0, 0, 0);
     border-radius: 20%;
 }
-.HERO .back_main .top_text{
+.HERO .back_main .top_text{/*テキスト位置*/
     position: absolute;
     z-index: 100;
     left: 30%;
@@ -68,14 +79,17 @@
     font-size: 45px;
     text-decoration: none;
 }
-.HERO .back_main a{
+.HERO .back_main a{/*装飾*/
+    color: rgb(0, 0, 0);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-decoration: none;
 }
-.HERO .back_main a:visited{
+.HERO .back_main a:visited{/*訪問後文字色*/
     color: rgb(0, 0, 0);
 }
-.HERO .back_main a:hover{
+.HERO .back_main a:hover{/*マウスホバー装飾*/
    color: rgb(255, 255, 255);
    text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
+
+
