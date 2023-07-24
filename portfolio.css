@@ -1,0 +1,50 @@
+
+/*ホームアイコン*/
+.HOME{
+    min-height: 5vh;
+}
+.HOME img{
+    position: absolute;
+    left: 93%;
+    border-radius:70%;
+    border: 2px solid black;
+    box-shadow: 3px 3px 0 0 rgba(166, 166, 166, 0.765);
+}
+
+/*トップページ*/
+.HERO{
+    min-height: 100vh;
+}
+.HERO .back_01{/*背景黄色*/
+    position: absolute;
+    left: 2%;
+    z-index: -2;
+    background-color: rgb(255, 255, 84, 0.759);
+    border-radius: 10px;
+    height: 600px;
+    width: 1300px;
+    background-image:radial-gradient(#afafaf74 20%, transparent 30%);
+    background-size: 20px 20px;
+}
+.HERO .back_02{/*背景赤*/
+    position: absolute;
+    left: 7%;
+    margin-top: 80px;
+    z-index: -2;
+    background-color: rgba(255, 0, 68, 0.759);
+    border-radius: 10px;
+    height: 600px;
+    width: 1300px;
+}
+.HERO .back_main{
+    position: absolute;
+    left: 4%;
+    top: 13%;
+    z-index: -1;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgba(0, 0, 0, 0.798);
+    border-radius: 3px;
+    height: 600px;
+    width: 1300px;
+}
+
