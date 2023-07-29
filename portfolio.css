@@ -1,704 +1,1417 @@
-html { scroll-behavior: smooth;}
-*{
-    overflow-x: hidden;
-}
-/*ホームアイコン*/
-.HOME img{
-    position: fixed;
-    left: 93%;
-    z-index: 1000;
-    border-radius:70%;
-    border: 2px solid rgb(0, 0, 0);
-}
-.HOME img:hover{
-    height: 100px;
-    width: 100px;
-    left: 92.5%;
-}
+@media (width > 480px) {
+    *{ 
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+    }
+    /*ホームアイコン*/
+    .HOME img{
+        position: fixed;
+        left: 93%;
+        z-index: 1000;
+        border-radius:70%;
+        border: 2px solid rgb(0, 0, 0);
+    }
+    .HOME img:hover{
+        height: 100px;
+        width: 100px;
+        left: 92.5%;
+    }
 
-/*トップページ*/
-.HERO{
-    min-height: 100vh;
-}
-.HERO .back_01{/*背景黄色*/
-    position: absolute;
-    left: 2%;
-    top: 7%;
-    z-index: -2;
-    background-color: rgb(255, 255, 84, 0.759);
-    border-radius: 5px;
-    height: 600px;
-    width: 1300px;
-    background-image:radial-gradient(#afafaf74 20%, transparent 30%);
-    background-size: 20px 20px;
-}
-.HERO .back_02{/*背景赤後ろ*/
-    position: absolute;
-    left: 7%;
-    margin-top: 140px;
-    z-index: -2;
-    background-color: rgb(255, 45, 68);
-    border-radius: 5px;
-    height: 600px;
-    width: 1300px;
-}
-.HERO .back_03{/*背景前*/
-    position: absolute;
-    left: 5.5%;
-    margin-top: 120px;
-    z-index: -2;
-    background-color: rgb(136, 45, 255);
-    border-radius: 5px;
-    height: 600px;
-    width: 1300px;
-}
-.HERO .back_main{/*テキスト背景*/
-    position: absolute;
-    left: 3.5%;
-    top: 13%;
-    z-index: 100;
-    background-color: rgb(255, 255, 255);
-    border: 2px solid rgba(0, 0, 0, 0.798);
-    border-radius: 3px;
-    height: 600px;
-    width: 1300px;
-}
-.HERO .back_main h1{/*タイトルテキスト*/
-    font-size: 60px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
-}
-.HERO .back_main img{/*ロゴ*/
-    position: absolute;
-    left: 40%;
-    border: 1.5px solid rgb(0, 0, 0);
-    border-radius: 20%;
-}
-.HERO .back_main .top_text{/*テキスト位置*/
-    position: absolute;
-    z-index: 100;
-    left: 30%;
-    margin-top: 320px;
-    font-size: 45px;
-    text-decoration: none;
-}
-.HERO .back_main a{/*文字装飾*/
-    color: rgb(0, 0, 0);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-decoration: none;
-}
-.HERO .back_main a:visited{/*訪問後文字色*/
-    color: rgb(0, 0, 0);
-}
-.HERO .back_main a:hover{/*マウスホバー装飾*/
-   color: rgb(255, 255, 255);
-   text-shadow: 2px 2px 2px rgb(0, 0, 0);
-}
-
-
-.WORKS{
-    position: relative;/*親要素にrelativeで親基準で小要素を配置できる*/
-    min-height: 100vh;
-}
-.WORKS .back_01{/*背景黄色*/
-    position: absolute;
-    left: 2%;
-    top: 7%;
-    z-index: -2;
-    background-color: rgb(255, 255, 84, 0.759);
-    border-radius: 5px;
-    height: 600px;
-    width: 1300px;
-    background-image:radial-gradient(#afafaf74 20%, transparent 30%);
-    background-size: 20px 20px;
-}
-.WORKS .back_02{/*背景後ろ*/
-    position: absolute;
-    left: 7%;
-    margin-top: 140px;
-    z-index: -2;
-    background-color: rgb(75, 72, 88);
-    border-radius: 5px;
-    height: 600px;
-    width: 1300px;
-}
-.WORKS .back_03{/*背景前*/
-    position: absolute;
-    left: 5.5%;
-    margin-top: 120px;
-    z-index: -2;
-    background-color: rgb(232, 49, 49);
-    border-radius: 5px;
-    height: 600px;
-    width: 1300px;
-}
-.WORKS .back_main{/*テキスト背景*/
-    position: absolute;
-    left: 3.5%;
-    top: 13%;
-    z-index: 100;
-    background-color: rgb(255, 255, 255);
-    border: 2px solid rgba(0, 0, 0, 0.798);
-    border-radius: 3px;
-    height: 600px;
-    width: 1300px;
-}
-.WORKS .back_main h1{/*タイトルテキスト*/
-    font-size: 60px;
-    padding-bottom: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
-}
-.WORKS .back_main .works_images{/*作品画像自動切り替え*/
-    position: relative;
-    width: 700px;
-    height: 350px;
-}
-/*画像切り替え　土台用意*/
-.WORKS .back_main .works_images .image{
-    position: absolute;
-    top: 0;
-    left: 10%;
-    bottom: 0;
-    right: 0;
-    opacity: 0;
-    border-radius: 8px;
-    background-size: cover;
-    background-position: center center;
-    animation: image_animation 25s infinite;
-}
-/*画像挿入*/
-.WORKS .back_main .works_images .w1{
-    background-image: url(work_images/portfolio_1-1.png);
-}
-.WORKS .back_main .works_images .w2{
-    background-image: url(work_images/portfolio_2-1.png);
-}
-.WORKS .back_main .works_images .w3{
-    background-image: url(work_images/portfolio_3-4.png);
-}
-.WORKS .back_main .works_images .w4{
-    background-image: url(work_images/portfolio_1-1.png);
-}
-.WORKS .back_main .works_images .w5{
-    background-image: url(work_images/portfolio_2-1.png);
-}
-@keyframes image_animation{/*切り替えトランジッション*/
-    0%{ opacity: 0;}
-    5%{ opacity: 1;}
-    25%{ opacity: 1;}
-    30%{ opacity: 1;}
-    100%{ opacity: 0;}
-}
-/*５秒ごとに遅れてアニメーション*/
-/*→→１枚5秒間表示ということ*/
-.WORKS .back_main .works_images .image:nth-of-type(1){
-    animation-delay: 0s;
-}
-.WORKS .back_main .works_images .image:nth-of-type(2){
-    animation-delay: 5s;
-}
-.WORKS .back_main .works_images .image:nth-of-type(3){
-    animation-delay: 10s;
-}
-.WORKS .back_main .works_images .image:nth-of-type(4){
-    animation-delay: 15s;
-}
-.WORKS .back_main .works_images .image:nth-of-type(5){
-    animation-delay: 20s;
-}
-.WORKS .back_main .work_text{/*文字列全体*/
-    position: absolute;
-    left: 70%;
-    top: 30%;
-    display: flex;
-    flex-flow: column;
-    line-height: 105px;
-}
-.WORKS .back_main .work_text a{/*文字装飾*/
-    font-size: 50px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-}
-.WORKS .back_main a:visited{/*訪問後文字色*/
-    color: rgb(0, 0, 0);
-}
-.WORKS .back_main a:hover{/*マウスホバー装飾*/
-   color: rgb(255, 255, 255);
-   text-shadow: 2px 2px 2px rgb(0, 0, 0);
-}
+    /*トップページ*/
+    .HERO{
+        min-height: 100vh;
+    }
+    .HERO .back_01{/*背景黄色*/
+        position: absolute;
+        left: 2%;
+        top: 7%;
+        z-index: -2;
+        background-color: rgb(255, 255, 84, 0.759);
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+        background-image:radial-gradient(#afafaf74 20%, transparent 30%);
+        background-size: 20px 20px;
+    }
+    .HERO .back_02{/*背景赤後ろ*/
+        position: absolute;
+        left: 7%;
+        margin-top: 140px;
+        z-index: -2;
+        background-color: rgb(255, 45, 68);
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+    }
+    .HERO .back_03{/*背景前*/
+        position: absolute;
+        left: 5.5%;
+        margin-top: 120px;
+        z-index: -2;
+        background-color: rgb(136, 45, 255);
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+    }
+    .HERO .back_main{/*テキスト背景*/
+        position: absolute;
+        left: 3.5%;
+        top: 13%;
+        z-index: 100;
+        background-color: rgb(255, 255, 255);
+        border: 2px solid rgba(0, 0, 0, 0.798);
+        border-radius: 3px;
+        height: 600px;
+        width: 1300px;
+    }
+    .HERO .back_main h1{/*タイトルテキスト*/
+        font-size: 60px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+    }
+    .HERO .back_main img{/*ロゴ*/
+        position: absolute;
+        left: 40%;
+        border: 1.5px solid rgb(0, 0, 0);
+        border-radius: 20%;
+    }
+    .HERO .back_main .top_text{/*テキスト位置*/
+        position: absolute;
+        z-index: 100;
+        left: 30%;
+        margin-top: 320px;
+        font-size: 45px;
+        text-decoration: none;
+    }
+    .HERO .back_main a{/*文字装飾*/
+        color: rgb(0, 0, 0);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-decoration: none;
+    }
+    .HERO .back_main a:visited{/*訪問後文字色*/
+        color: rgb(0, 0, 0);
+    }
+    .HERO .back_main a:hover{/*マウスホバー装飾*/
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    }
 
 
-.SKILL{
-    position: relative;/*親要素にrelativeで親基準で小要素を配置できる*/
-    min-height: 100vh;
-}
-.SKILL .back_01{/*背景黄色*/
-    position: absolute;
-    left: 2%;
-    top: 7%;
-    z-index: -2;
-    background-color: rgb(255, 255, 84, 0.759);
-    border-radius: 5px;
-    height: 600px;
-    width: 1300px;
-    background-image:radial-gradient(#afafaf74 20%, transparent 30%);
-    background-size: 20px 20px;
-}
-.SKILL .back_02{/*背景後ろ*/
-    position: absolute;
-    left: 7%;
-    margin-top: 140px;
-    z-index: -2;
-    background-color: rgb(52, 147, 171);
-    border-radius: 5px;
-    height: 600px;
-    width: 1300px;
-}
-.SKILL .back_03{/*背景前*/
-    position: absolute;
-    left: 5.5%;
-    margin-top: 120px;
-    z-index: -2;
-    background-color: rgb(253, 158, 34);
-    border-radius: 5px;
-    height: 600px;
-    width: 1300px;
-}
-.SKILL .back_main{/*テキスト背景*/
-    position: absolute;
-    left: 3.5%;
-    top: 13%;
-    z-index: 100;
-    background-color: rgb(255, 255, 255);
-    border: 2px solid rgba(0, 0, 0, 0.798);
-    border-radius: 3px;
-    height: 600px;
-    width: 1300px;
-}
-.SKILL .back_main h1{/*タイトルテキスト*/
-    font-size: 60px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
-}
-.SKILL .back_main .skill_text1{/*テキスト上段*/
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    position: relative;
-    display: flex;
-    left: 13%;
-}
-.SKILL .back_main .skill_02{/*テキスト上段間隔*/
-    padding: 0 12em;
-}
-.SKILL .back_main .skill_text2/*画像下段*/{
-    position: absolute;
-    display: flex;
-    left: 15%;
-}
-.SKILL .back_main .skill_text2 img{/*画像下段間隔*/
-    padding: 4em 0 3em 3em;
+    .WORKS{
+        position: relative;/*親要素にrelativeで親基準で小要素を配置できる*/
+        min-height: 100vh;
+    }
+    .WORKS .back_01{/*背景黄色*/
+        position: absolute;
+        left: 2%;
+        top: 7%;
+        z-index: -2;
+        background-color: rgb(255, 255, 84, 0.759);
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+        background-image:radial-gradient(#afafaf74 20%, transparent 30%);
+        background-size: 20px 20px;
+    }
+    .WORKS .back_02{/*背景後ろ*/
+        position: absolute;
+        left: 7%;
+        margin-top: 140px;
+        z-index: -2;
+        background-color: rgb(75, 72, 88);
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+    }
+    .WORKS .back_03{/*背景前*/
+        position: absolute;
+        left: 5.5%;
+        margin-top: 120px;
+        z-index: -2;
+        background-color: rgb(232, 49, 49);
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+    }
+    .WORKS .back_main{/*テキスト背景*/
+        position: absolute;
+        left: 3.5%;
+        top: 13%;
+        z-index: 100;
+        background-color: rgb(255, 255, 255);
+        border: 2px solid rgba(0, 0, 0, 0.798);
+        border-radius: 3px;
+        height: 600px;
+        width: 1300px;
+    }
+    .WORKS .back_main h1{/*タイトルテキスト*/
+        font-size: 60px;
+        padding-bottom: 0;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+    }
+    .WORKS .back_main .works_images{/*作品画像自動切り替え*/
+        position: relative;
+        width: 700px;
+        height: 350px;
+    }
+    /*画像切り替え　土台用意*/
+    .WORKS .back_main .works_images .image{
+        position: absolute;
+        top: 0;
+        left: 10%;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        border-radius: 8px;
+        background-size: cover;
+        background-position: center center;
+        animation: image_animation 25s infinite;
+    }
+    /*画像挿入*/
+    .WORKS .back_main .works_images .w1{
+        background-image: url(work_images/portfolio_1-1.png);
+    }
+    .WORKS .back_main .works_images .w2{
+        background-image: url(work_images/portfolio_2-1.png);
+    }
+    .WORKS .back_main .works_images .w3{
+        background-image: url(work_images/portfolio_3-4.png);
+    }
+    .WORKS .back_main .works_images .w4{
+        background-image: url(work_images/portfolio_1-1.png);
+    }
+    .WORKS .back_main .works_images .w5{
+        background-image: url(work_images/portfolio_2-1.png);
+    }
+    @keyframes image_animation{/*切り替えトランジッション*/
+        0%{ opacity: 0;}
+        5%{ opacity: 1;}
+        25%{ opacity: 1;}
+        30%{ opacity: 1;}
+        100%{ opacity: 0;}
+    }
+    /*５秒ごとに遅れてアニメーション*/
+    /*→→１枚5秒間表示ということ*/
+    .WORKS .back_main .works_images .image:nth-of-type(1){
+        animation-delay: 0s;
+    }
+    .WORKS .back_main .works_images .image:nth-of-type(2){
+        animation-delay: 5s;
+    }
+    .WORKS .back_main .works_images .image:nth-of-type(3){
+        animation-delay: 10s;
+    }
+    .WORKS .back_main .works_images .image:nth-of-type(4){
+        animation-delay: 15s;
+    }
+    .WORKS .back_main .works_images .image:nth-of-type(5){
+        animation-delay: 20s;
+    }
+    .WORKS .back_main .work_text{/*文字列全体*/
+        position: absolute;
+        left: 70%;
+        top: 30%;
+        display: flex;
+        flex-flow: column;
+        line-height: 105px;
+    }
+    .WORKS .back_main .work_text a{/*文字装飾*/
+        font-size: 50px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+    .WORKS .back_main a:visited{/*訪問後文字色*/
+        color: rgb(0, 0, 0);
+    }
+    .WORKS .back_main a:hover{/*マウスホバー装飾*/
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    }
+
+
+    .SKILL{
+        position: relative;/*親要素にrelativeで親基準で小要素を配置できる*/
+        min-height: 100vh;
+    }
+    .SKILL .back_01{/*背景黄色*/
+        position: absolute;
+        left: 2%;
+        top: 7%;
+        z-index: -2;
+        background-color: rgb(255, 255, 84, 0.759);
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+        background-image:radial-gradient(#afafaf74 20%, transparent 30%);
+        background-size: 20px 20px;
+    }
+    .SKILL .back_02{/*背景後ろ*/
+        position: absolute;
+        left: 7%;
+        margin-top: 140px;
+        z-index: -2;
+        background-color: rgb(52, 147, 171);
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+    }
+    .SKILL .back_03{/*背景前*/
+        position: absolute;
+        left: 5.5%;
+        margin-top: 120px;
+        z-index: -2;
+        background-color: rgb(253, 158, 34);
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+    }
+    .SKILL .back_main{/*テキスト背景*/
+        position: absolute;
+        left: 3.5%;
+        top: 13%;
+        z-index: 100;
+        background-color: rgb(255, 255, 255);
+        border: 2px solid rgba(0, 0, 0, 0.798);
+        border-radius: 3px;
+        height: 600px;
+        width: 1300px;
+    }
+    .SKILL .back_main h1{/*タイトルテキスト*/
+        font-size: 60px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+    }
+    .SKILL .back_main .skill_text1{/*テキスト上段*/
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        position: relative;
+        display: flex;
+        left: 13%;
+    }
+    .SKILL .back_main .skill_02{/*テキスト上段間隔*/
+        padding: 0 12em;
+    }
+    .SKILL .back_main .skill_text2/*画像下段*/{
+        position: absolute;
+        display: flex;
+        left: 15%;
+    }
+    .SKILL .back_main .skill_text2 img{/*画像下段間隔*/
+        padding: 4em 0 3em 3em;
+    }
+
+    .ABOUT{
+        position: relative;/*親要素にrelativeで親基準で小要素を配置できる*/
+        min-height: 100vh;
+    }
+    .ABOUT .back_01{/*背景黄色*/
+        position: absolute;
+        left: 2%;
+        top: 7%;
+        z-index: -2;
+        background-color: rgb(255, 255, 84, 0.759);
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+        background-image:radial-gradient(#afafaf74 20%, transparent 30%);
+        background-size: 20px 20px;
+    }
+    .ABOUT .back_02{/*背景後ろ*/
+        position: absolute;
+        left: 7%;
+        margin-top: 140px;
+        z-index: -2;
+        background-color: #54AE93;
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+    }
+    .ABOUT .back_03{/*背景前*/
+        position: absolute;
+        left: 5.5%;
+        margin-top: 120px;
+        z-index: -2;
+        background-color: #20426E;
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+    }
+    .ABOUT .back_main{/*テキスト背景*/
+        position: absolute;
+        left: 3.5%;
+        top: 13%;
+        z-index: 100;
+        background-color: rgb(255, 255, 255);
+        border: 2px solid rgba(0, 0, 0, 0.798);
+        border-radius: 3px;
+        height: 600px;
+        width: 1300px;
+    }
+    .ABOUT .back_main h1{/*タイトルテキスト*/
+        font-size: 60px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+    }
+    .ABOUT .back_main .about_contents img{/*画像*/
+        position: absolute;
+        left: 10%;
+    }
+    .ABOUT .back_main .about_text{/*位置*/
+        position: relative;
+        left: 60%;
+        margin-top: -45px;
+        padding: 0;
+        width: 400px;
+    }
+    .ABOUT .back_main .about_text .t_1{/*テキスト内容*/
+        font-size: 45px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    }
+    .ABOUT .back_main .about_text .t_2{/*テキスト日本語サイズ*/
+        font-size: 30px; 
+    }
+    .ABOUT .back_main .about_contents .contact_logo img{/*ロゴ位置*/
+        position: relative;
+        display: flexbox;
+        left: 56%;
+        margin-top: 1em;
+        margin-left: 50px;
+    }
+    .ABOUT .back_main .about_contents .contact_logo img:hover{/*ロゴ マウスホバー装飾*/
+        height: 60px;
+        margin-top: 0;
+        margin-left: 40px;
+    }
+
+    /*ホームアイコン*/
+    .HOME_W img{
+        position: fixed;
+        left: 94%;
+        z-index: 1000;
+        width: 70px;
+        height: 70px;
+        background-color: rgb(255, 255, 255);
+        border-radius:70%;
+        border: 5px solid rgb(0, 0, 0);
+    }
+    .HOME_W img:hover{
+        height: 80px;
+        width: 80px;
+        left: 93.5%;
+    }
+    /*スケボー*/
+    .WORKS_detail{
+        position: relative;/*親要素にrelativeで親基準で小要素を配置できる*/
+        height: 100vh;
+    }
+    .WORKS_detail .back_01{/*背景黄色*/
+        position: absolute;
+        left: 2%;
+        top: 7%;
+        z-index: -2;
+        background-color: rgb(255, 255, 84, 0.759);
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+        background-image:radial-gradient(#afafaf74 20%, transparent 30%);
+        background-size: 20px 20px;
+    }
+    .WORKS_detail .back_02{/*背景後ろ*/
+        position: absolute;
+        left: 7%;
+        margin-top: 140px;
+        z-index: -2;
+        background-color: rgb(75, 72, 88);
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+    }
+    .WORKS_detail .back_03{/*背景前*/
+        position: absolute;
+        left: 5.5%;
+        margin-top: 120px;
+        z-index: -2;
+        background-color: rgb(232, 49, 49);
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+    }
+    .WORKS_detail .back_main{/*テキスト背景*/
+        position: absolute;
+        left: 3.5%;
+        top: 13%;
+        z-index: 100;
+        background-color: rgb(255, 255, 255);
+        border: 2px solid rgba(0, 0, 0, 0.798);
+        border-radius: 3px;
+        height: 600px;
+        width: 1300px;
+    }
+    .WORKS_detail .back_main h1{/*タイトルテキスト*/
+        font-size: 60px;
+        padding-bottom: 0;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+    }
+    .WORKS_detail .back_main .detail_images{/*作品画像自動切り替え*/
+        position: relative;
+        width: 850px;
+        height: 390px;
+    }
+    /*画像切り替え　土台用意*/
+    .WORKS_detail .back_main .detail_images .d_images{
+        position: absolute;
+        top: 0;
+        left: 5%;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        border-radius: 8px;
+        background-size: cover;
+        background-position: center center;
+        animation: image2_animation 25s infinite;
+    }
+    /*画像挿入*/
+    .WORKS_detail .back_main .detail_images .w_detail1{
+        background-image: url(work_images/portfolio_1-1.png);
+    }
+    .WORKS_detail .back_main .detail_images .w_detail2{
+        background-image: url(work_images/portfolio_1-2.png);
+    }
+    .WORKS_detail .back_main .detail_images .w_detail3{
+        background-image: url(work_images/portfolio_1-3.png);
+    }
+    .WORKS_detail .back_main .detail_images .w_detail4{
+        background-image: url(work_images/portfolio_1-1.png);
+    }
+    .WORKS_detail .back_main .detail_images .w_detail5{
+        background-image: url(work_images/portfolio_1-2.png);
+    }
+    @keyframes image2_animation{/*切り替えトランジッション*/
+        0%{ opacity: 0;}
+        5%{ opacity: 1;}
+        25%{ opacity: 1;}
+        30%{ opacity: 1;}
+        100%{ opacity: 0;}
+    }
+    /*アニメーション*/
+    .WORKS_detail .back_main .detail_images .d_images:nth-of-type(1){
+        animation-delay: 0s;
+    }
+    .WORKS_detail .back_main .detail_images .d_images:nth-of-type(2){
+        animation-delay: 5s;
+    }
+    .WORKS_detail .back_main .detail_images .d_images:nth-of-type(3){
+        animation-delay: 10s;
+    }
+    .WORKS_detail .back_main .detail_images .d_images:nth-of-type(4){
+        animation-delay: 15s;
+    }
+    .WORKS_detail .back_main .detail_images .d_images:nth-of-type(5){
+        animation-delay: 20s;
+    }
+    .WORKS_detail .back_main .Text_S{/*文字列全体*/
+        position: absolute;
+        left: 70%;
+        top: 30%;
+        display: flex;
+        flex-flow: column;
+        line-height: 105px;
+    }
+    .WORKS_detail .back_main .Text_S{/*文字装飾*/
+        font-size: 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+    .WORKS_detail .back_main .Text_S2{
+        font-size: 20px;
+        position: absolute;
+        left: 85%;
+        top: 50%;
+        display: flex;
+        flex-flow: column;
+    }
+
+    /*アークリアクタ*/
+    .WORKS_detail .back_main .detail_images2{/*作品画像自動切り替え*/
+        position: relative;
+        z-index: 500;
+        width: 850px;
+        height: 390px;
+    }
+    /*画像切り替え　土台用意*/
+    .WORKS_detail .back_main .detail_images2 .d2_images{
+        position: absolute;
+        top: 0;
+        left: 5%;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        border-radius: 8px;
+        background-size: cover;
+        background-position: center center;
+        animation: image3_animation 25s infinite;
+    }
+    /*画像挿入*/
+    .WORKS_detail .back_main .detail_images2 .w2_detail1{
+        background-image: url(work_images/portfolio_2-1.png);
+    }
+    .WORKS_detail .back_main .detail_images2 .w2_detail2{
+        background-image: url(work_images/portfolio_2-2.png);
+    }
+    .WORKS_detail .back_main .detail_images2 .w2_detail3{
+        background-image: url(work_images/portfolio_2-3.png);
+    }
+    .WORKS_detail .back_main .detail_images2 .w2_detail4{
+        background-image: url(work_images/portfolio_2-1.png);
+    }
+    .WORKS_detail .back_main .detail_images2 .w2_detail5{
+        background-image: url(work_images/portfolio_2-2.png);
+    }
+    @keyframes image3_animation{/*切り替えトランジッション*/
+        0%{ opacity: 0;}
+        5%{ opacity: 1;}
+        25%{ opacity: 1;}
+        30%{ opacity: 1;}
+        100%{ opacity: 0;}
+    }
+    /*アニメーション*/
+    .WORKS_detail .back_main .detail_images2 .d2_images:nth-of-type(1){
+        animation-delay: 0s;
+    }
+    .WORKS_detail .back_main .detail_images2 .d2_images:nth-of-type(2){
+        animation-delay: 5s;
+    }
+    .WORKS_detail .back_main .detail_images2 .d2_images:nth-of-type(3){
+        animation-delay: 10s;
+    }
+    .WORKS_detail .back_main .detail_images2 .d2_images:nth-of-type(4){
+        animation-delay: 15s;
+    }
+    .WORKS_detail .back_main .detail_images2 .d2_images:nth-of-type(5){
+        animation-delay: 20s;
+    }
+    .WORKS_detail .back_main .Text_A{/*文字列全体*/
+        position: absolute;
+        left: 70%;
+        top: 30%;
+        display: flex;
+        flex-flow: column;
+        line-height: 105px;
+    }
+    .WORKS_detail .back_main .Text_A{/*文字装飾*/
+        font-size: 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+    .WORKS_detail .back_main .Text_A2{
+        font-size: 20px;
+        position: absolute;
+        left: 85%;
+        top: 50%;
+        display: flex;
+        flex-flow: column;
+    }
+
+    /*ライトセーバー*/
+    .WORKS_detail .back_main .detail_images3{/*作品画像自動切り替え*/
+        position: relative;
+        z-index: 500;
+        width: 850px;
+        height: 390px;
+    }
+    /*画像切り替え　土台用意*/
+    .WORKS_detail .back_main .detail_images3 .d3_images{
+        position: absolute;
+        top: 0;
+        left: 5%;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        border-radius: 8px;
+        background-size: cover;
+        background-position: center center;
+        animation: image4_animation 30s infinite;
+    }
+    /*画像挿入*/
+    .WORKS_detail .back_main .detail_images3 .w3_detail1{
+        background-image: url(work_images/portfolio_3-1.png);
+    }
+    .WORKS_detail .back_main .detail_images3 .w3_detail2{
+        background-image: url(work_images/portfolio_3-2.png);
+    }
+    .WORKS_detail .back_main .detail_images3 .w3_detail3{
+        background-image: url(work_images/portfolio_3-3.png);
+    }
+    .WORKS_detail .back_main .detail_images3 .w3_detail4{
+        background-image: url(work_images/portfolio_3-4.png);
+    }
+    .WORKS_detail .back_main .detail_images3 .w3_detail5{
+        background-image: url(work_images/portfolio_3-5.png);
+    }
+    .WORKS_detail .back_main .detail_images3 .w3_detail6{
+        background-image: url(work_images/portfolio_3-6.png);
+    }
+    @keyframes image4_animation{/*切り替えトランジッション*/
+        0%{ opacity: 0;}
+        5%{ opacity: 1;}
+        25%{ opacity: 1;}
+        30%{ opacity: 1;}
+        100%{ opacity: 0;}
+    }
+    /*アニメーション*/
+    .WORKS_detail .back_main .detail_images3 .d3_images:nth-of-type(1){
+        animation-delay: 0s;
+    }
+    .WORKS_detail .back_main .detail_images3 .d3_images:nth-of-type(2){
+        animation-delay: 5s;
+    }
+    .WORKS_detail .back_main .detail_images3 .d3_images:nth-of-type(3){
+        animation-delay: 10s;
+    }
+    .WORKS_detail .back_main .detail_images3 .d3_images:nth-of-type(4){
+        animation-delay: 15s;
+    }
+    .WORKS_detail .back_main .detail_images3 .d3_images:nth-of-type(5){
+        animation-delay: 20s;
+    }
+    .WORKS_detail .back_main .detail_images3 .d3_images:nth-of-type(6){
+        animation-delay: 25s;
+    }
+    .WORKS_detail .back_main .Text_L{/*文字列全体*/
+        position: absolute;
+        left: 70%;
+        top: 30%;
+        display: flex;
+        flex-flow: column;
+        line-height: 105px;
+    }
+    .WORKS_detail .back_main .Text_L{/*文字装飾*/
+        font-size: 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+    .WORKS_detail .back_main .Text_L2{
+        font-size: 20px;
+        position: absolute;
+        left: 85%;
+        top: 50%;
+        display: flex;
+        flex-flow: column;
+    }
 }
 
-.ABOUT{
-    position: relative;/*親要素にrelativeで親基準で小要素を配置できる*/
-    min-height: 100vh;
-}
-.ABOUT .back_01{/*背景黄色*/
-    position: absolute;
-    left: 2%;
-    top: 7%;
-    z-index: -2;
-    background-color: rgb(255, 255, 84, 0.759);
-    border-radius: 5px;
-    height: 600px;
-    width: 1300px;
-    background-image:radial-gradient(#afafaf74 20%, transparent 30%);
-    background-size: 20px 20px;
-}
-.ABOUT .back_02{/*背景後ろ*/
-    position: absolute;
-    left: 7%;
-    margin-top: 140px;
-    z-index: -2;
-    background-color: #54AE93;
-    border-radius: 5px;
-    height: 600px;
-    width: 1300px;
-}
-.ABOUT .back_03{/*背景前*/
-    position: absolute;
-    left: 5.5%;
-    margin-top: 120px;
-    z-index: -2;
-    background-color: #20426E;
-    border-radius: 5px;
-    height: 600px;
-    width: 1300px;
-}
-.ABOUT .back_main{/*テキスト背景*/
-    position: absolute;
-    left: 3.5%;
-    top: 13%;
-    z-index: 100;
-    background-color: rgb(255, 255, 255);
-    border: 2px solid rgba(0, 0, 0, 0.798);
-    border-radius: 3px;
-    height: 600px;
-    width: 1300px;
-}
-.ABOUT .back_main h1{/*タイトルテキスト*/
-    font-size: 60px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
-}
-.ABOUT .back_main .about_contents img{/*画像*/
-    position: absolute;
-    left: 10%;
-}
-.ABOUT .back_main .about_text{/*位置*/
-    position: relative;
-    left: 60%;
-    margin-top: -45px;
-    padding: 0;
-    width: 400px;
-}
-.ABOUT .back_main .about_text .t_1{/*テキスト内容*/
-    font-size: 45px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
-}
-.ABOUT .back_main .about_text .t_2{/*テキスト日本語サイズ*/
-    font-size: 30px; 
-}
-.ABOUT .back_main .about_contents .contact_logo img{/*ロゴ位置*/
-    position: relative;
-    display: flexbox;
-    left: 56%;
-    margin-top: 1em;
-    margin-left: 50px;
-}
-.ABOUT .back_main .about_contents .contact_logo img:hover{/*ロゴ マウスホバー装飾*/
-    height: 60px;
-    margin-top: 0;
-    margin-left: 40px;
-}
 
-/*ホームアイコン*/
-.HOME_W img{
-    position: fixed;
-    left: 94%;
-    z-index: 1000;
-    width: 70px;
-    height: 70px;
-    background-color: rgb(255, 255, 255);
-    border-radius:70%;
-    border: 5px solid rgb(0, 0, 0);
-}
-.HOME_W img:hover{
-    height: 80px;
-    width: 80px;
-    left: 93.5%;
-}
-/*スケボー*/
-.WORKS_detail{
-    position: relative;/*親要素にrelativeで親基準で小要素を配置できる*/
-    height: 100vh;
-}
-.WORKS_detail .back_01{/*背景黄色*/
-    position: absolute;
-    left: 2%;
-    top: 7%;
-    z-index: -2;
-    background-color: rgb(255, 255, 84, 0.759);
-    border-radius: 5px;
-    height: 600px;
-    width: 1300px;
-    background-image:radial-gradient(#afafaf74 20%, transparent 30%);
-    background-size: 20px 20px;
-}
-.WORKS_detail .back_02{/*背景後ろ*/
-    position: absolute;
-    left: 7%;
-    margin-top: 140px;
-    z-index: -2;
-    background-color: rgb(75, 72, 88);
-    border-radius: 5px;
-    height: 600px;
-    width: 1300px;
-}
-.WORKS_detail .back_03{/*背景前*/
-    position: absolute;
-    left: 5.5%;
-    margin-top: 120px;
-    z-index: -2;
-    background-color: rgb(232, 49, 49);
-    border-radius: 5px;
-    height: 600px;
-    width: 1300px;
-}
-.WORKS_detail .back_main{/*テキスト背景*/
-    position: absolute;
-    left: 3.5%;
-    top: 13%;
-    z-index: 100;
-    background-color: rgb(255, 255, 255);
-    border: 2px solid rgba(0, 0, 0, 0.798);
-    border-radius: 3px;
-    height: 600px;
-    width: 1300px;
-}
-.WORKS_detail .back_main h1{/*タイトルテキスト*/
-    font-size: 60px;
-    padding-bottom: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
-}
-.WORKS_detail .back_main .detail_images{/*作品画像自動切り替え*/
-    position: relative;
-    width: 850px;
-    height: 390px;
-}
-/*画像切り替え　土台用意*/
-.WORKS_detail .back_main .detail_images .d_images{
-    position: absolute;
-    top: 0;
-    left: 5%;
-    bottom: 0;
-    right: 0;
-    opacity: 0;
-    border-radius: 8px;
-    background-size: cover;
-    background-position: center center;
-    animation: image2_animation 25s infinite;
-}
-/*画像挿入*/
-.WORKS_detail .back_main .detail_images .w_detail1{
-    background-image: url(work_images/portfolio_1-1.png);
-}
-.WORKS_detail .back_main .detail_images .w_detail2{
-    background-image: url(work_images/portfolio_1-2.png);
-}
-.WORKS_detail .back_main .detail_images .w_detail3{
-    background-image: url(work_images/portfolio_1-3.png);
-}
-.WORKS_detail .back_main .detail_images .w_detail4{
-    background-image: url(work_images/portfolio_1-1.png);
-}
-.WORKS_detail .back_main .detail_images .w_detail5{
-    background-image: url(work_images/portfolio_1-2.png);
-}
-@keyframes image2_animation{/*切り替えトランジッション*/
-    0%{ opacity: 0;}
-    5%{ opacity: 1;}
-    25%{ opacity: 1;}
-    30%{ opacity: 1;}
-    100%{ opacity: 0;}
-}
-/*アニメーション*/
-.WORKS_detail .back_main .detail_images .d_images:nth-of-type(1){
-    animation-delay: 0s;
-}
-.WORKS_detail .back_main .detail_images .d_images:nth-of-type(2){
-    animation-delay: 5s;
-}
-.WORKS_detail .back_main .detail_images .d_images:nth-of-type(3){
-    animation-delay: 10s;
-}
-.WORKS_detail .back_main .detail_images .d_images:nth-of-type(4){
-    animation-delay: 15s;
-}
-.WORKS_detail .back_main .detail_images .d_images:nth-of-type(5){
-    animation-delay: 20s;
-}
-.WORKS_detail .back_main .Text_S{/*文字列全体*/
-    position: absolute;
-    left: 70%;
-    top: 30%;
-    display: flex;
-    flex-flow: column;
-    line-height: 105px;
-}
-.WORKS_detail .back_main .Text_S{/*文字装飾*/
-    font-size: 40px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-}
-.WORKS_detail .back_main .Text_S2{
-    font-size: 20px;
-    position: absolute;
-    left: 85%;
-    top: 50%;
-    display: flex;
-    flex-flow: column;
-}
 
-/*アークリアクタ*/
-.WORKS_detail .back_main .detail_images2{/*作品画像自動切り替え*/
-    position: relative;
-    z-index: 500;
-    width: 850px;
-    height: 390px;
-}
-/*画像切り替え　土台用意*/
-.WORKS_detail .back_main .detail_images2 .d2_images{
-    position: absolute;
-    top: 0;
-    left: 5%;
-    bottom: 0;
-    right: 0;
-    opacity: 0;
-    border-radius: 8px;
-    background-size: cover;
-    background-position: center center;
-    animation: image3_animation 25s infinite;
-}
-/*画像挿入*/
-.WORKS_detail .back_main .detail_images2 .w2_detail1{
-    background-image: url(work_images/portfolio_2-1.png);
-}
-.WORKS_detail .back_main .detail_images2 .w2_detail2{
-    background-image: url(work_images/portfolio_2-2.png);
-}
-.WORKS_detail .back_main .detail_images2 .w2_detail3{
-    background-image: url(work_images/portfolio_2-3.png);
-}
-.WORKS_detail .back_main .detail_images2 .w2_detail4{
-    background-image: url(work_images/portfolio_2-1.png);
-}
-.WORKS_detail .back_main .detail_images2 .w2_detail5{
-    background-image: url(work_images/portfolio_2-2.png);
-}
-@keyframes image3_animation{/*切り替えトランジッション*/
-    0%{ opacity: 0;}
-    5%{ opacity: 1;}
-    25%{ opacity: 1;}
-    30%{ opacity: 1;}
-    100%{ opacity: 0;}
-}
-/*アニメーション*/
-.WORKS_detail .back_main .detail_images2 .d2_images:nth-of-type(1){
-    animation-delay: 0s;
-}
-.WORKS_detail .back_main .detail_images2 .d2_images:nth-of-type(2){
-    animation-delay: 5s;
-}
-.WORKS_detail .back_main .detail_images2 .d2_images:nth-of-type(3){
-    animation-delay: 10s;
-}
-.WORKS_detail .back_main .detail_images2 .d2_images:nth-of-type(4){
-    animation-delay: 15s;
-}
-.WORKS_detail .back_main .detail_images2 .d2_images:nth-of-type(5){
-    animation-delay: 20s;
-}
-.WORKS_detail .back_main .Text_A{/*文字列全体*/
-    position: absolute;
-    left: 70%;
-    top: 30%;
-    display: flex;
-    flex-flow: column;
-    line-height: 105px;
-}
-.WORKS_detail .back_main .Text_A{/*文字装飾*/
-    font-size: 40px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-}
-.WORKS_detail .back_main .Text_A2{
-    font-size: 20px;
-    position: absolute;
-    left: 85%;
-    top: 50%;
-    display: flex;
-    flex-flow: column;
-}
-
-/*ライトセーバー*/
-.WORKS_detail .back_main .detail_images3{/*作品画像自動切り替え*/
-    position: relative;
-    z-index: 500;
-    width: 850px;
-    height: 390px;
-}
-/*画像切り替え　土台用意*/
-.WORKS_detail .back_main .detail_images3 .d3_images{
-    position: absolute;
-    top: 0;
-    left: 5%;
-    bottom: 0;
-    right: 0;
-    opacity: 0;
-    border-radius: 8px;
-    background-size: cover;
-    background-position: center center;
-    animation: image4_animation 30s infinite;
-}
-/*画像挿入*/
-.WORKS_detail .back_main .detail_images3 .w3_detail1{
-    background-image: url(work_images/portfolio_3-1.png);
-}
-.WORKS_detail .back_main .detail_images3 .w3_detail2{
-    background-image: url(work_images/portfolio_3-2.png);
-}
-.WORKS_detail .back_main .detail_images3 .w3_detail3{
-    background-image: url(work_images/portfolio_3-3.png);
-}
-.WORKS_detail .back_main .detail_images3 .w3_detail4{
-    background-image: url(work_images/portfolio_3-4.png);
-}
-.WORKS_detail .back_main .detail_images3 .w3_detail5{
-    background-image: url(work_images/portfolio_3-5.png);
-}
-.WORKS_detail .back_main .detail_images3 .w3_detail6{
-    background-image: url(work_images/portfolio_3-6.png);
-}
-@keyframes image4_animation{/*切り替えトランジッション*/
-    0%{ opacity: 0;}
-    5%{ opacity: 1;}
-    25%{ opacity: 1;}
-    30%{ opacity: 1;}
-    100%{ opacity: 0;}
-}
-/*アニメーション*/
-.WORKS_detail .back_main .detail_images3 .d3_images:nth-of-type(1){
-    animation-delay: 0s;
-}
-.WORKS_detail .back_main .detail_images3 .d3_images:nth-of-type(2){
-    animation-delay: 5s;
-}
-.WORKS_detail .back_main .detail_images3 .d3_images:nth-of-type(3){
-    animation-delay: 10s;
-}
-.WORKS_detail .back_main .detail_images3 .d3_images:nth-of-type(4){
-    animation-delay: 15s;
-}
-.WORKS_detail .back_main .detail_images3 .d3_images:nth-of-type(5){
-    animation-delay: 20s;
-}
-.WORKS_detail .back_main .detail_images3 .d3_images:nth-of-type(6){
-    animation-delay: 25s;
-}
-.WORKS_detail .back_main .Text_L{/*文字列全体*/
-    position: absolute;
-    left: 70%;
-    top: 30%;
-    display: flex;
-    flex-flow: column;
-    line-height: 105px;
-}
-.WORKS_detail .back_main .Text_L{/*文字装飾*/
-    font-size: 40px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-}
-.WORKS_detail .back_main .Text_L2{
-    font-size: 20px;
-    position: absolute;
-    left: 85%;
-    top: 50%;
-    display: flex;
-    flex-flow: column;
+/*　スマホ表示→480px以下の時の表示装飾　*/
+@media (width <= 480px) {
+    *{ 
+        scroll-behavior: smooth;
+        max-width: 480px;
+    }
+    /*ホームアイコン*/
+    .HOME img{
+        position: fixed;
+        left: 93%;
+        z-index: 1000;
+        border-radius:70%;
+        border: 2px solid rgb(0, 0, 0);
+    }
+    .HOME img:hover{
+        height: 100px;
+        width: 100px;
+        left: 92.5%;
+    }
+    
+    /*トップページ*/
+    .HERO{
+        min-height: 100vh;
+    }
+    .HERO .back_01{/*背景黄色*/
+        position: absolute;
+        left: 2%;
+        top: 7%;
+        z-index: -2;
+        background-color: rgb(255, 255, 84, 0.759);
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+        background-image:radial-gradient(#afafaf74 20%, transparent 30%);
+        background-size: 20px 20px;
+    }
+    .HERO .back_02{/*背景赤後ろ*/
+        position: absolute;
+        left: 7%;
+        margin-top: 140px;
+        z-index: -2;
+        background-color: rgb(255, 45, 68);
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+    }
+    .HERO .back_03{/*背景前*/
+        position: absolute;
+        left: 5.5%;
+        margin-top: 120px;
+        z-index: -2;
+        background-color: rgb(136, 45, 255);
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+    }
+    .HERO .back_main{/*テキスト背景*/
+        position: absolute;
+        left: 3.5%;
+        top: 13%;
+        z-index: 100;
+        background-color: rgb(255, 255, 255);
+        border: 2px solid rgba(0, 0, 0, 0.798);
+        border-radius: 3px;
+        height: 600px;
+        width: 1300px;
+    }
+    .HERO .back_main h1{/*タイトルテキスト*/
+        font-size: 60px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+    }
+    .HERO .back_main img{/*ロゴ*/
+        position: absolute;
+        left: 40%;
+        border: 1.5px solid rgb(0, 0, 0);
+        border-radius: 20%;
+    }
+    .HERO .back_main .top_text{/*テキスト位置*/
+        position: absolute;
+        z-index: 100;
+        left: 30%;
+        margin-top: 320px;
+        font-size: 45px;
+        text-decoration: none;
+    }
+    .HERO .back_main a{/*文字装飾*/
+        color: rgb(0, 0, 0);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-decoration: none;
+    }
+    .HERO .back_main a:visited{/*訪問後文字色*/
+        color: rgb(0, 0, 0);
+    }
+    .HERO .back_main a:hover{/*マウスホバー装飾*/
+       color: rgb(255, 255, 255);
+       text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    }
+    
+    
+    .WORKS{
+        position: relative;/*親要素にrelativeで親基準で小要素を配置できる*/
+        min-height: 100vh;
+    }
+    .WORKS .back_01{/*背景黄色*/
+        position: absolute;
+        left: 2%;
+        top: 7%;
+        z-index: -2;
+        background-color: rgb(255, 255, 84, 0.759);
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+        background-image:radial-gradient(#afafaf74 20%, transparent 30%);
+        background-size: 20px 20px;
+    }
+    .WORKS .back_02{/*背景後ろ*/
+        position: absolute;
+        left: 7%;
+        margin-top: 140px;
+        z-index: -2;
+        background-color: rgb(75, 72, 88);
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+    }
+    .WORKS .back_03{/*背景前*/
+        position: absolute;
+        left: 5.5%;
+        margin-top: 120px;
+        z-index: -2;
+        background-color: rgb(232, 49, 49);
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+    }
+    .WORKS .back_main{/*テキスト背景*/
+        position: absolute;
+        left: 3.5%;
+        top: 13%;
+        z-index: 100;
+        background-color: rgb(255, 255, 255);
+        border: 2px solid rgba(0, 0, 0, 0.798);
+        border-radius: 3px;
+        height: 600px;
+        width: 1300px;
+    }
+    .WORKS .back_main h1{/*タイトルテキスト*/
+        font-size: 60px;
+        padding-bottom: 0;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+    }
+    .WORKS .back_main .works_images{/*作品画像自動切り替え*/
+        position: relative;
+        width: 700px;
+        height: 350px;
+    }
+    /*画像切り替え　土台用意*/
+    .WORKS .back_main .works_images .image{
+        position: absolute;
+        top: 0;
+        left: 10%;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        border-radius: 8px;
+        background-size: cover;
+        background-position: center center;
+        animation: image_animation 25s infinite;
+    }
+    /*画像挿入*/
+    .WORKS .back_main .works_images .w1{
+        background-image: url(work_images/portfolio_1-1.png);
+    }
+    .WORKS .back_main .works_images .w2{
+        background-image: url(work_images/portfolio_2-1.png);
+    }
+    .WORKS .back_main .works_images .w3{
+        background-image: url(work_images/portfolio_3-4.png);
+    }
+    .WORKS .back_main .works_images .w4{
+        background-image: url(work_images/portfolio_1-1.png);
+    }
+    .WORKS .back_main .works_images .w5{
+        background-image: url(work_images/portfolio_2-1.png);
+    }
+    @keyframes image_animation{/*切り替えトランジッション*/
+        0%{ opacity: 0;}
+        5%{ opacity: 1;}
+        25%{ opacity: 1;}
+        30%{ opacity: 1;}
+        100%{ opacity: 0;}
+    }
+    /*５秒ごとに遅れてアニメーション*/
+    /*→→１枚5秒間表示ということ*/
+    .WORKS .back_main .works_images .image:nth-of-type(1){
+        animation-delay: 0s;
+    }
+    .WORKS .back_main .works_images .image:nth-of-type(2){
+        animation-delay: 5s;
+    }
+    .WORKS .back_main .works_images .image:nth-of-type(3){
+        animation-delay: 10s;
+    }
+    .WORKS .back_main .works_images .image:nth-of-type(4){
+        animation-delay: 15s;
+    }
+    .WORKS .back_main .works_images .image:nth-of-type(5){
+        animation-delay: 20s;
+    }
+    .WORKS .back_main .work_text{/*文字列全体*/
+        position: absolute;
+        left: 70%;
+        top: 30%;
+        display: flex;
+        flex-flow: column;
+        line-height: 105px;
+    }
+    .WORKS .back_main .work_text a{/*文字装飾*/
+        font-size: 50px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+    .WORKS .back_main a:visited{/*訪問後文字色*/
+        color: rgb(0, 0, 0);
+    }
+    .WORKS .back_main a:hover{/*マウスホバー装飾*/
+       color: rgb(255, 255, 255);
+       text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    }
+    
+    
+    .SKILL{
+        position: relative;/*親要素にrelativeで親基準で小要素を配置できる*/
+        min-height: 100vh;
+    }
+    .SKILL .back_01{/*背景黄色*/
+        position: absolute;
+        left: 2%;
+        top: 7%;
+        z-index: -2;
+        background-color: rgb(255, 255, 84, 0.759);
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+        background-image:radial-gradient(#afafaf74 20%, transparent 30%);
+        background-size: 20px 20px;
+    }
+    .SKILL .back_02{/*背景後ろ*/
+        position: absolute;
+        left: 7%;
+        margin-top: 140px;
+        z-index: -2;
+        background-color: rgb(52, 147, 171);
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+    }
+    .SKILL .back_03{/*背景前*/
+        position: absolute;
+        left: 5.5%;
+        margin-top: 120px;
+        z-index: -2;
+        background-color: rgb(253, 158, 34);
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+    }
+    .SKILL .back_main{/*テキスト背景*/
+        position: absolute;
+        left: 3.5%;
+        top: 13%;
+        z-index: 100;
+        background-color: rgb(255, 255, 255);
+        border: 2px solid rgba(0, 0, 0, 0.798);
+        border-radius: 3px;
+        height: 600px;
+        width: 1300px;
+    }
+    .SKILL .back_main h1{/*タイトルテキスト*/
+        font-size: 60px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+    }
+    .SKILL .back_main .skill_text1{/*テキスト上段*/
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        position: relative;
+        display: flex;
+        left: 13%;
+    }
+    .SKILL .back_main .skill_02{/*テキスト上段間隔*/
+        padding: 0 12em;
+    }
+    .SKILL .back_main .skill_text2/*画像下段*/{
+        position: absolute;
+        display: flex;
+        left: 15%;
+    }
+    .SKILL .back_main .skill_text2 img{/*画像下段間隔*/
+        padding: 4em 0 3em 3em;
+    }
+    
+    .ABOUT{
+        position: relative;/*親要素にrelativeで親基準で小要素を配置できる*/
+        min-height: 100vh;
+    }
+    .ABOUT .back_01{/*背景黄色*/
+        position: absolute;
+        left: 2%;
+        top: 7%;
+        z-index: -2;
+        background-color: rgb(255, 255, 84, 0.759);
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+        background-image:radial-gradient(#afafaf74 20%, transparent 30%);
+        background-size: 20px 20px;
+    }
+    .ABOUT .back_02{/*背景後ろ*/
+        position: absolute;
+        left: 7%;
+        margin-top: 140px;
+        z-index: -2;
+        background-color: #54AE93;
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+    }
+    .ABOUT .back_03{/*背景前*/
+        position: absolute;
+        left: 5.5%;
+        margin-top: 120px;
+        z-index: -2;
+        background-color: #20426E;
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+    }
+    .ABOUT .back_main{/*テキスト背景*/
+        position: absolute;
+        left: 3.5%;
+        top: 13%;
+        z-index: 100;
+        background-color: rgb(255, 255, 255);
+        border: 2px solid rgba(0, 0, 0, 0.798);
+        border-radius: 3px;
+        height: 600px;
+        width: 1300px;
+    }
+    .ABOUT .back_main h1{/*タイトルテキスト*/
+        font-size: 60px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+    }
+    .ABOUT .back_main .about_contents img{/*画像*/
+        position: absolute;
+        left: 10%;
+    }
+    .ABOUT .back_main .about_text{/*位置*/
+        position: relative;
+        left: 60%;
+        margin-top: -45px;
+        padding: 0;
+        width: 400px;
+    }
+    .ABOUT .back_main .about_text .t_1{/*テキスト内容*/
+        font-size: 45px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    }
+    .ABOUT .back_main .about_text .t_2{/*テキスト日本語サイズ*/
+        font-size: 30px; 
+    }
+    .ABOUT .back_main .about_contents .contact_logo img{/*ロゴ位置*/
+        position: relative;
+        display: flexbox;
+        left: 56%;
+        margin-top: 1em;
+        margin-left: 50px;
+    }
+    .ABOUT .back_main .about_contents .contact_logo img:hover{/*ロゴ マウスホバー装飾*/
+        height: 60px;
+        margin-top: 0;
+        margin-left: 40px;
+    }
+    
+    /*ホームアイコン*/
+    .HOME_W img{
+        position: fixed;
+        left: 94%;
+        z-index: 1000;
+        width: 70px;
+        height: 70px;
+        background-color: rgb(255, 255, 255);
+        border-radius:70%;
+        border: 5px solid rgb(0, 0, 0);
+    }
+    .HOME_W img:hover{
+        height: 80px;
+        width: 80px;
+        left: 93.5%;
+    }
+    /*スケボー*/
+    .WORKS_detail{
+        position: relative;/*親要素にrelativeで親基準で小要素を配置できる*/
+        height: 100vh;
+    }
+    .WORKS_detail .back_01{/*背景黄色*/
+        position: absolute;
+        left: 2%;
+        top: 7%;
+        z-index: -2;
+        background-color: rgb(255, 255, 84, 0.759);
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+        background-image:radial-gradient(#afafaf74 20%, transparent 30%);
+        background-size: 20px 20px;
+    }
+    .WORKS_detail .back_02{/*背景後ろ*/
+        position: absolute;
+        left: 7%;
+        margin-top: 140px;
+        z-index: -2;
+        background-color: rgb(75, 72, 88);
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+    }
+    .WORKS_detail .back_03{/*背景前*/
+        position: absolute;
+        left: 5.5%;
+        margin-top: 120px;
+        z-index: -2;
+        background-color: rgb(232, 49, 49);
+        border-radius: 5px;
+        height: 600px;
+        width: 1300px;
+    }
+    .WORKS_detail .back_main{/*テキスト背景*/
+        position: absolute;
+        left: 3.5%;
+        top: 13%;
+        z-index: 100;
+        background-color: rgb(255, 255, 255);
+        border: 2px solid rgba(0, 0, 0, 0.798);
+        border-radius: 3px;
+        height: 600px;
+        width: 1300px;
+    }
+    .WORKS_detail .back_main h1{/*タイトルテキスト*/
+        font-size: 60px;
+        padding-bottom: 0;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+    }
+    .WORKS_detail .back_main .detail_images{/*作品画像自動切り替え*/
+        position: relative;
+        width: 850px;
+        height: 390px;
+    }
+    /*画像切り替え　土台用意*/
+    .WORKS_detail .back_main .detail_images .d_images{
+        position: absolute;
+        top: 0;
+        left: 5%;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        border-radius: 8px;
+        background-size: cover;
+        background-position: center center;
+        animation: image2_animation 25s infinite;
+    }
+    /*画像挿入*/
+    .WORKS_detail .back_main .detail_images .w_detail1{
+        background-image: url(work_images/portfolio_1-1.png);
+    }
+    .WORKS_detail .back_main .detail_images .w_detail2{
+        background-image: url(work_images/portfolio_1-2.png);
+    }
+    .WORKS_detail .back_main .detail_images .w_detail3{
+        background-image: url(work_images/portfolio_1-3.png);
+    }
+    .WORKS_detail .back_main .detail_images .w_detail4{
+        background-image: url(work_images/portfolio_1-1.png);
+    }
+    .WORKS_detail .back_main .detail_images .w_detail5{
+        background-image: url(work_images/portfolio_1-2.png);
+    }
+    @keyframes image2_animation{/*切り替えトランジッション*/
+        0%{ opacity: 0;}
+        5%{ opacity: 1;}
+        25%{ opacity: 1;}
+        30%{ opacity: 1;}
+        100%{ opacity: 0;}
+    }
+    /*アニメーション*/
+    .WORKS_detail .back_main .detail_images .d_images:nth-of-type(1){
+        animation-delay: 0s;
+    }
+    .WORKS_detail .back_main .detail_images .d_images:nth-of-type(2){
+        animation-delay: 5s;
+    }
+    .WORKS_detail .back_main .detail_images .d_images:nth-of-type(3){
+        animation-delay: 10s;
+    }
+    .WORKS_detail .back_main .detail_images .d_images:nth-of-type(4){
+        animation-delay: 15s;
+    }
+    .WORKS_detail .back_main .detail_images .d_images:nth-of-type(5){
+        animation-delay: 20s;
+    }
+    .WORKS_detail .back_main .Text_S{/*文字列全体*/
+        position: absolute;
+        left: 70%;
+        top: 30%;
+        display: flex;
+        flex-flow: column;
+        line-height: 105px;
+    }
+    .WORKS_detail .back_main .Text_S{/*文字装飾*/
+        font-size: 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+    .WORKS_detail .back_main .Text_S2{
+        font-size: 20px;
+        position: absolute;
+        left: 85%;
+        top: 50%;
+        display: flex;
+        flex-flow: column;
+    }
+    
+    /*アークリアクタ*/
+    .WORKS_detail .back_main .detail_images2{/*作品画像自動切り替え*/
+        position: relative;
+        z-index: 500;
+        width: 850px;
+        height: 390px;
+    }
+    /*画像切り替え　土台用意*/
+    .WORKS_detail .back_main .detail_images2 .d2_images{
+        position: absolute;
+        top: 0;
+        left: 5%;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        border-radius: 8px;
+        background-size: cover;
+        background-position: center center;
+        animation: image3_animation 25s infinite;
+    }
+    /*画像挿入*/
+    .WORKS_detail .back_main .detail_images2 .w2_detail1{
+        background-image: url(work_images/portfolio_2-1.png);
+    }
+    .WORKS_detail .back_main .detail_images2 .w2_detail2{
+        background-image: url(work_images/portfolio_2-2.png);
+    }
+    .WORKS_detail .back_main .detail_images2 .w2_detail3{
+        background-image: url(work_images/portfolio_2-3.png);
+    }
+    .WORKS_detail .back_main .detail_images2 .w2_detail4{
+        background-image: url(work_images/portfolio_2-1.png);
+    }
+    .WORKS_detail .back_main .detail_images2 .w2_detail5{
+        background-image: url(work_images/portfolio_2-2.png);
+    }
+    @keyframes image3_animation{/*切り替えトランジッション*/
+        0%{ opacity: 0;}
+        5%{ opacity: 1;}
+        25%{ opacity: 1;}
+        30%{ opacity: 1;}
+        100%{ opacity: 0;}
+    }
+    /*アニメーション*/
+    .WORKS_detail .back_main .detail_images2 .d2_images:nth-of-type(1){
+        animation-delay: 0s;
+    }
+    .WORKS_detail .back_main .detail_images2 .d2_images:nth-of-type(2){
+        animation-delay: 5s;
+    }
+    .WORKS_detail .back_main .detail_images2 .d2_images:nth-of-type(3){
+        animation-delay: 10s;
+    }
+    .WORKS_detail .back_main .detail_images2 .d2_images:nth-of-type(4){
+        animation-delay: 15s;
+    }
+    .WORKS_detail .back_main .detail_images2 .d2_images:nth-of-type(5){
+        animation-delay: 20s;
+    }
+    .WORKS_detail .back_main .Text_A{/*文字列全体*/
+        position: absolute;
+        left: 70%;
+        top: 30%;
+        display: flex;
+        flex-flow: column;
+        line-height: 105px;
+    }
+    .WORKS_detail .back_main .Text_A{/*文字装飾*/
+        font-size: 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+    .WORKS_detail .back_main .Text_A2{
+        font-size: 20px;
+        position: absolute;
+        left: 85%;
+        top: 50%;
+        display: flex;
+        flex-flow: column;
+    }
+    
+    /*ライトセーバー*/
+    .WORKS_detail .back_main .detail_images3{/*作品画像自動切り替え*/
+        position: relative;
+        z-index: 500;
+        width: 850px;
+        height: 390px;
+    }
+    /*画像切り替え　土台用意*/
+    .WORKS_detail .back_main .detail_images3 .d3_images{
+        position: absolute;
+        top: 0;
+        left: 5%;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        border-radius: 8px;
+        background-size: cover;
+        background-position: center center;
+        animation: image4_animation 30s infinite;
+    }
+    /*画像挿入*/
+    .WORKS_detail .back_main .detail_images3 .w3_detail1{
+        background-image: url(work_images/portfolio_3-1.png);
+    }
+    .WORKS_detail .back_main .detail_images3 .w3_detail2{
+        background-image: url(work_images/portfolio_3-2.png);
+    }
+    .WORKS_detail .back_main .detail_images3 .w3_detail3{
+        background-image: url(work_images/portfolio_3-3.png);
+    }
+    .WORKS_detail .back_main .detail_images3 .w3_detail4{
+        background-image: url(work_images/portfolio_3-4.png);
+    }
+    .WORKS_detail .back_main .detail_images3 .w3_detail5{
+        background-image: url(work_images/portfolio_3-5.png);
+    }
+    .WORKS_detail .back_main .detail_images3 .w3_detail6{
+        background-image: url(work_images/portfolio_3-6.png);
+    }
+    @keyframes image4_animation{/*切り替えトランジッション*/
+        0%{ opacity: 0;}
+        5%{ opacity: 1;}
+        25%{ opacity: 1;}
+        30%{ opacity: 1;}
+        100%{ opacity: 0;}
+    }
+    /*アニメーション*/
+    .WORKS_detail .back_main .detail_images3 .d3_images:nth-of-type(1){
+        animation-delay: 0s;
+    }
+    .WORKS_detail .back_main .detail_images3 .d3_images:nth-of-type(2){
+        animation-delay: 5s;
+    }
+    .WORKS_detail .back_main .detail_images3 .d3_images:nth-of-type(3){
+        animation-delay: 10s;
+    }
+    .WORKS_detail .back_main .detail_images3 .d3_images:nth-of-type(4){
+        animation-delay: 15s;
+    }
+    .WORKS_detail .back_main .detail_images3 .d3_images:nth-of-type(5){
+        animation-delay: 20s;
+    }
+    .WORKS_detail .back_main .detail_images3 .d3_images:nth-of-type(6){
+        animation-delay: 25s;
+    }
+    .WORKS_detail .back_main .Text_L{/*文字列全体*/
+        position: absolute;
+        left: 70%;
+        top: 30%;
+        display: flex;
+        flex-flow: column;
+        line-height: 105px;
+    }
+    .WORKS_detail .back_main .Text_L{/*文字装飾*/
+        font-size: 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+    .WORKS_detail .back_main .Text_L2{
+        font-size: 20px;
+        position: absolute;
+        left: 85%;
+        top: 50%;
+        display: flex;
+        flex-flow: column;
+    }
+    
 }
