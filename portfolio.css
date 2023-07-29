@@ -151,7 +151,6 @@ html { scroll-behavior: smooth;}
 }
 .WORKS .back_main .works_images{/*作品画像自動切り替え*/
     position: relative;
-    z-index: 500;
     width: 700px;
     height: 350px;
 }
@@ -179,17 +178,16 @@ html { scroll-behavior: smooth;}
     background-image: url(work_images/portfolio_3-4.png);
 }
 .WORKS .back_main .works_images .w4{
-    background-image: url(work_images/kari1.jpeg);
+    background-image: url(work_images/portfolio_1-1.png);
 }
 .WORKS .back_main .works_images .w5{
-    background-image: url(work_images/kari2.jpeg);
+    background-image: url(work_images/portfolio_2-1.png);
 }
-
 @keyframes image_animation{/*切り替えトランジッション*/
     0%{ opacity: 0;}
     5%{ opacity: 1;}
     25%{ opacity: 1;}
-    30%{ opacity: 0;}
+    30%{ opacity: 1;}
     100%{ opacity: 0;}
 }
 /*５秒ごとに遅れてアニメーション*/
@@ -212,13 +210,13 @@ html { scroll-behavior: smooth;}
 .WORKS .back_main .work_text{/*文字列全体*/
     position: absolute;
     left: 70%;
-    top: 24%;
+    top: 30%;
     display: flex;
     flex-flow: column;
-    line-height: 65px;
+    line-height: 105px;
 }
 .WORKS .back_main .work_text a{/*文字装飾*/
-    font-size: 45px;
+    font-size: 50px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -380,7 +378,7 @@ html { scroll-behavior: smooth;}
     margin-left: 50px;
 }
 
-
+/*スケボー*/
 .WORKS_detail{
     position: relative;/*親要素にrelativeで親基準で小要素を配置できる*/
     height: 100vh;
@@ -434,18 +432,229 @@ html { scroll-behavior: smooth;}
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
 }
-.WORKS_detail .back_main .w_detail1{/*作品画像クリック切り替え*/
+.WORKS_detail .back_main .detail_images{/*作品画像自動切り替え*/
     position: relative;
     z-index: 500;
-    width: 700px;
-    height: 350px;
-    background-position: center center;
+    width: 850px;
+    height: 390px;
+}
+/*画像切り替え　土台用意*/
+.WORKS_detail .back_main .detail_images .d_images{
+    position: absolute;
+    top: 0;
+    left: 5%;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    border-radius: 8px;
     background-size: cover;
+    background-position: center center;
+    animation: image2_animation 25s infinite;
+}
+/*画像挿入*/
+.WORKS_detail .back_main .detail_images .w_detail1{
+    background-image: url(work_images/portfolio_1-1.png);
+}
+.WORKS_detail .back_main .detail_images .w_detail2{
+    background-image: url(work_images/portfolio_1-2.png);
+}
+.WORKS_detail .back_main .detail_images .w_detail3{
+    background-image: url(work_images/portfolio_1-3.png);
+}
+.WORKS_detail .back_main .detail_images .w_detail4{
+    background-image: url(work_images/portfolio_1-1.png);
+}
+.WORKS_detail .back_main .detail_images .w_detail5{
+    background-image: url(work_images/portfolio_1-2.png);
+}
+@keyframes image2_animation{/*切り替えトランジッション*/
+    0%{ opacity: 0;}
+    5%{ opacity: 1;}
+    25%{ opacity: 1;}
+    30%{ opacity: 1;}
+    100%{ opacity: 0;}
+}
+/*アニメーション*/
+.WORKS_detail .back_main .detail_images .d_images:nth-of-type(1){
+    animation-delay: 0s;
+}
+.WORKS_detail .back_main .detail_images .d_images:nth-of-type(2){
+    animation-delay: 5s;
+}
+.WORKS_detail .back_main .detail_images .d_images:nth-of-type(3){
+    animation-delay: 10s;
+}
+.WORKS_detail .back_main .detail_images .d_images:nth-of-type(4){
+    animation-delay: 15s;
+}
+.WORKS_detail .back_main .detail_images .d_images:nth-of-type(5){
+    animation-delay: 20s;
+}
+.WORKS_detail .back_main .Text_S{/*文字列全体*/
+    position: absolute;
+    left: 70%;
+    top: 30%;
+    display: flex;
+    flex-flow: column;
+    line-height: 105px;
+}
+.WORKS_detail .back_main .Text_S{/*文字装飾*/
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
 }
 
-.WORKS_detail .back_main .w_detail1{
-    background-image: url('work_images/kari1.jpeg');
+/*アークリアクタ*/
+.WORKS_detail .back_main .detail_images2{/*作品画像自動切り替え*/
+    position: relative;
+    z-index: 500;
+    width: 850px;
+    height: 390px;
 }
-.WORKS_detail .back_main .w_detail1:active{
-    background-image: url('work_images/kari2.jpeg');
+/*画像切り替え　土台用意*/
+.WORKS_detail .back_main .detail_images2 .d2_images{
+    position: absolute;
+    top: 0;
+    left: 5%;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center center;
+    animation: image3_animation 25s infinite;
+}
+/*画像挿入*/
+.WORKS_detail .back_main .detail_images2 .w2_detail1{
+    background-image: url(work_images/portfolio_2-1.png);
+}
+.WORKS_detail .back_main .detail_images2 .w2_detail2{
+    background-image: url(work_images/portfolio_2-2.png);
+}
+.WORKS_detail .back_main .detail_images2 .w2_detail3{
+    background-image: url(work_images/portfolio_2-3.png);
+}
+.WORKS_detail .back_main .detail_images2 .w2_detail4{
+    background-image: url(work_images/portfolio_2-1.png);
+}
+.WORKS_detail .back_main .detail_images2 .w2_detail5{
+    background-image: url(work_images/portfolio_2-2.png);
+}
+@keyframes image3_animation{/*切り替えトランジッション*/
+    0%{ opacity: 0;}
+    5%{ opacity: 1;}
+    25%{ opacity: 1;}
+    30%{ opacity: 1;}
+    100%{ opacity: 0;}
+}
+/*アニメーション*/
+.WORKS_detail .back_main .detail_images2 .d2_images:nth-of-type(1){
+    animation-delay: 0s;
+}
+.WORKS_detail .back_main .detail_images2 .d2_images:nth-of-type(2){
+    animation-delay: 5s;
+}
+.WORKS_detail .back_main .detail_images2 .d2_images:nth-of-type(3){
+    animation-delay: 10s;
+}
+.WORKS_detail .back_main .detail_images2 .d2_images:nth-of-type(4){
+    animation-delay: 15s;
+}
+.WORKS_detail .back_main .detail_images2 .d2_images:nth-of-type(5){
+    animation-delay: 20s;
+}
+.WORKS_detail .back_main .Text_A{/*文字列全体*/
+    position: absolute;
+    left: 70%;
+    top: 30%;
+    display: flex;
+    flex-flow: column;
+    line-height: 105px;
+}
+.WORKS_detail .back_main .Text_A{/*文字装飾*/
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+/*ライトセーバー*/
+.WORKS_detail .back_main .detail_images3{/*作品画像自動切り替え*/
+    position: relative;
+    z-index: 500;
+    width: 850px;
+    height: 390px;
+}
+/*画像切り替え　土台用意*/
+.WORKS_detail .back_main .detail_images3 .d3_images{
+    position: absolute;
+    top: 0;
+    left: 5%;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center center;
+    animation: image4_animation 30s infinite;
+}
+/*画像挿入*/
+.WORKS_detail .back_main .detail_images3 .w3_detail1{
+    background-image: url(work_images/portfolio_3-1.png);
+}
+.WORKS_detail .back_main .detail_images3 .w3_detail2{
+    background-image: url(work_images/portfolio_3-2.png);
+}
+.WORKS_detail .back_main .detail_images3 .w3_detail3{
+    background-image: url(work_images/portfolio_3-3.png);
+}
+.WORKS_detail .back_main .detail_images3 .w3_detail4{
+    background-image: url(work_images/portfolio_3-4.png);
+}
+.WORKS_detail .back_main .detail_images3 .w3_detail5{
+    background-image: url(work_images/portfolio_3-5.png);
+}
+.WORKS_detail .back_main .detail_images3 .w3_detail6{
+    background-image: url(work_images/portfolio_3-6.png);
+}
+@keyframes image4_animation{/*切り替えトランジッション*/
+    0%{ opacity: 0;}
+    5%{ opacity: 1;}
+    25%{ opacity: 1;}
+    30%{ opacity: 1;}
+    100%{ opacity: 0;}
+}
+/*アニメーション*/
+.WORKS_detail .back_main .detail_images3 .d3_images:nth-of-type(1){
+    animation-delay: 0s;
+}
+.WORKS_detail .back_main .detail_images3 .d3_images:nth-of-type(2){
+    animation-delay: 5s;
+}
+.WORKS_detail .back_main .detail_images3 .d3_images:nth-of-type(3){
+    animation-delay: 10s;
+}
+.WORKS_detail .back_main .detail_images3 .d3_images:nth-of-type(4){
+    animation-delay: 15s;
+}
+.WORKS_detail .back_main .detail_images3 .d3_images:nth-of-type(5){
+    animation-delay: 20s;
+}
+.WORKS_detail .back_main .detail_images3 .d3_images:nth-of-type(6){
+    animation-delay: 25s;
+}
+.WORKS_detail .back_main .Text_L{/*文字列全体*/
+    position: absolute;
+    left: 70%;
+    top: 30%;
+    display: flex;
+    flex-flow: column;
+    line-height: 105px;
+}
+.WORKS_detail .back_main .Text_L{/*文字装飾*/
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
 }
