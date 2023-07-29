@@ -370,13 +370,19 @@ html { scroll-behavior: smooth;}
 .ABOUT .back_main .about_text .t_2{/*テキスト日本語サイズ*/
     font-size: 30px; 
 }
-.ABOUT .back_main .about_contents .about_text2 img{/*位置*/
+.ABOUT .back_main .about_contents .contact_logo img{/*ロゴ位置*/
     position: relative;
     display: flexbox;
     left: 56%;
     margin-top: 1em;
     margin-left: 50px;
 }
+.ABOUT .back_main .about_contents .contact_logo img:hover{/*ロゴ マウスホバー装飾*/
+    height: 60px;
+    margin-top: 0;
+    margin-left: 40px;
+}
+
 
 /*スケボー*/
 .WORKS_detail{
@@ -428,12 +434,7 @@ html { scroll-behavior: smooth;}
 }
 .WORKS_detail .back_main h1{/*タイトルテキスト*/
     font-size: 60px;
-    padding-bottom: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
-}
-.WORKS_detail .back_main .detail_images{/*作品画像自動切り替え*/
-    position: relative;
+   position: relative;
     z-index: 500;
     width: 850px;
     height: 390px;
