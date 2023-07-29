@@ -721,80 +721,87 @@
     /*ホームアイコン*/
     .HOME img{
         position: fixed;
-        left: 50%;
+        top: 1%;
+        left: 76%;
+        width: 80px;
+        height: 80px;
         z-index: 1000;
         border-radius:70%;
         border: 2px solid rgb(0, 0, 0);
     }
     .HOME img:hover{
-        height: 100px;
-        width: 100px;
-        left: 50%;
+        height: 90px;
+        width: 90px;
+        left: 74.5%;
     }
     
     /*トップページ*/
     .HERO{
-        min-height: 100vh;
+        min-height: 850px;
     }
     .HERO .back_01{/*背景黄色*/
         position: absolute;
-        left: 2%;
+        left: 4%;
         top: 7%;
         z-index: -2;
         background-color: rgb(255, 255, 84, 0.759);
         border-radius: 5px;
-        height: 600px;
-        width: 130px;
+        height: 650px;
+        width: 270px;
         background-image:radial-gradient(#afafaf74 20%, transparent 30%);
         background-size: 20px 20px;
     }
     .HERO .back_02{/*背景赤後ろ*/
         position: absolute;
-        left: 7%;
-        margin-top: 140px;
+        left: 20%;
+        top: 15%;
         z-index: -2;
         background-color: rgb(255, 45, 68);
         border-radius: 5px;
-        height: 600px;
-        width: 100px;
+        height: 650px;
+        width: 270px;
     }
     .HERO .back_03{/*背景前*/
         position: absolute;
-        left: 5.5%;
-        margin-top: 120px;
+        left: 15%;
+        top: 13%;
         z-index: -2;
         background-color: rgb(136, 45, 255);
         border-radius: 5px;
-        height: 600px;
-        width: 130px;
+        height: 650px;
+        width: 270px;
     }
     .HERO .back_main{/*テキスト背景*/
         position: absolute;
-        left: 3.5%;
-        top: 13%;
+        left: 10%;
+        top: 11%;
         z-index: 100;
         background-color: rgb(255, 255, 255);
         border: 2px solid rgba(0, 0, 0, 0.798);
         border-radius: 3px;
-        height: 600px;
-        width: 130px;
+        height: 650px;
+        width: 270px;
     }
     .HERO .back_main h1{/*タイトルテキスト*/
-        font-size: 10px;
+        font-size: 38px;
+        line-height: 90px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         text-align: center;
     }
     .HERO .back_main img{/*ロゴ*/
+        width: 150px;
+        height: 150px;
         position: absolute;
-        left: 40%;
+        left: 21%;
         border: 1.5px solid rgb(0, 0, 0);
         border-radius: 20%;
     }
     .HERO .back_main .top_text{/*テキスト位置*/
         position: absolute;
         z-index: 100;
-        left: 30%;
-        margin-top: 320px;
+        line-height: 90px;
+        top: 50%;
+        left: 20%;
         font-size: 45px;
         text-decoration: none;
     }
