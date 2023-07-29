@@ -1157,6 +1157,7 @@
         height: 80px;
         z-index: 1000;
         border-radius:70%;
+        background-color: rgb(255, 255, 255);
         border: 2px solid rgb(0, 0, 0);
     }
     .HOME_W img:hover{
