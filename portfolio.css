@@ -383,7 +383,22 @@ html { scroll-behavior: smooth;}
     margin-left: 40px;
 }
 
-
+/*ホームアイコン*/
+.HOME_W img{
+    position: fixed;
+    left: 94%;
+    z-index: 1000;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+    border-radius:70%;
+    border: 5px solid rgb(0, 0, 0);
+}
+.HOME_W img:hover{
+    height: 80px;
+    width: 80px;
+    left: 93.5%;
+}
 /*スケボー*/
 .WORKS_detail{
     position: relative;/*親要素にrelativeで親基準で小要素を配置できる*/
