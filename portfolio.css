@@ -707,16 +707,21 @@
 
 
 
+
+
 /*　スマホ表示→480px以下の時の表示装飾　*/
-@media (width <= 480px) {
+@media (width <= 420px) {
     *{ 
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
         scroll-behavior: smooth;
-        max-width: 480px;
+        max-width: 400px;
     }
     /*ホームアイコン*/
     .HOME img{
         position: fixed;
-        left: 93%;
+        left: 50%;
         z-index: 1000;
         border-radius:70%;
         border: 2px solid rgb(0, 0, 0);
@@ -724,7 +729,7 @@
     .HOME img:hover{
         height: 100px;
         width: 100px;
-        left: 92.5%;
+        left: 50%;
     }
     
     /*トップページ*/
@@ -739,7 +744,7 @@
         background-color: rgb(255, 255, 84, 0.759);
         border-radius: 5px;
         height: 600px;
-        width: 1300px;
+        width: 130px;
         background-image:radial-gradient(#afafaf74 20%, transparent 30%);
         background-size: 20px 20px;
     }
@@ -751,7 +756,7 @@
         background-color: rgb(255, 45, 68);
         border-radius: 5px;
         height: 600px;
-        width: 1300px;
+        width: 100px;
     }
     .HERO .back_03{/*背景前*/
         position: absolute;
@@ -761,7 +766,7 @@
         background-color: rgb(136, 45, 255);
         border-radius: 5px;
         height: 600px;
-        width: 1300px;
+        width: 130px;
     }
     .HERO .back_main{/*テキスト背景*/
         position: absolute;
@@ -772,10 +777,10 @@
         border: 2px solid rgba(0, 0, 0, 0.798);
         border-radius: 3px;
         height: 600px;
-        width: 1300px;
+        width: 130px;
     }
     .HERO .back_main h1{/*タイトルテキスト*/
-        font-size: 60px;
+        font-size: 10px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         text-align: center;
     }
@@ -819,7 +824,7 @@
         background-color: rgb(255, 255, 84, 0.759);
         border-radius: 5px;
         height: 600px;
-        width: 1300px;
+        width: 130px;
         background-image:radial-gradient(#afafaf74 20%, transparent 30%);
         background-size: 20px 20px;
     }
@@ -831,7 +836,7 @@
         background-color: rgb(75, 72, 88);
         border-radius: 5px;
         height: 600px;
-        width: 1300px;
+        width: 100px;
     }
     .WORKS .back_03{/*背景前*/
         position: absolute;
@@ -841,7 +846,7 @@
         background-color: rgb(232, 49, 49);
         border-radius: 5px;
         height: 600px;
-        width: 1300px;
+        width: 100px;
     }
     .WORKS .back_main{/*テキスト背景*/
         position: absolute;
@@ -852,7 +857,7 @@
         border: 2px solid rgba(0, 0, 0, 0.798);
         border-radius: 3px;
         height: 600px;
-        width: 1300px;
+        width: 130px;
     }
     .WORKS .back_main h1{/*タイトルテキスト*/
         font-size: 60px;
@@ -862,7 +867,7 @@
     }
     .WORKS .back_main .works_images{/*作品画像自動切り替え*/
         position: relative;
-        width: 700px;
+        width: 70px;
         height: 350px;
     }
     /*画像切り替え　土台用意*/
@@ -953,7 +958,7 @@
         background-color: rgb(255, 255, 84, 0.759);
         border-radius: 5px;
         height: 600px;
-        width: 1300px;
+        width: 130px;
         background-image:radial-gradient(#afafaf74 20%, transparent 30%);
         background-size: 20px 20px;
     }
@@ -965,7 +970,7 @@
         background-color: rgb(52, 147, 171);
         border-radius: 5px;
         height: 600px;
-        width: 1300px;
+        width: 130px;
     }
     .SKILL .back_03{/*背景前*/
         position: absolute;
@@ -975,7 +980,7 @@
         background-color: rgb(253, 158, 34);
         border-radius: 5px;
         height: 600px;
-        width: 1300px;
+        width: 130px;
     }
     .SKILL .back_main{/*テキスト背景*/
         position: absolute;
@@ -986,7 +991,7 @@
         border: 2px solid rgba(0, 0, 0, 0.798);
         border-radius: 3px;
         height: 600px;
-        width: 1300px;
+        width: 100px;
     }
     .SKILL .back_main h1{/*タイトルテキスト*/
         font-size: 60px;
@@ -996,19 +1001,17 @@
     .SKILL .back_main .skill_text1{/*テキスト上段*/
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         position: relative;
-        display: flex;
-        left: 13%;
+        
     }
     .SKILL .back_main .skill_02{/*テキスト上段間隔*/
         padding: 0 12em;
     }
     .SKILL .back_main .skill_text2/*画像下段*/{
         position: absolute;
-        display: flex;
-        left: 15%;
+        
     }
     .SKILL .back_main .skill_text2 img{/*画像下段間隔*/
-        padding: 4em 0 3em 3em;
+        
     }
     
     .ABOUT{
@@ -1023,7 +1026,7 @@
         background-color: rgb(255, 255, 84, 0.759);
         border-radius: 5px;
         height: 600px;
-        width: 1300px;
+        width: 130px;
         background-image:radial-gradient(#afafaf74 20%, transparent 30%);
         background-size: 20px 20px;
     }
@@ -1035,7 +1038,7 @@
         background-color: #54AE93;
         border-radius: 5px;
         height: 600px;
-        width: 1300px;
+        width: 130px;
     }
     .ABOUT .back_03{/*背景前*/
         position: absolute;
@@ -1045,7 +1048,7 @@
         background-color: #20426E;
         border-radius: 5px;
         height: 600px;
-        width: 1300px;
+        width: 130px;
     }
     .ABOUT .back_main{/*テキスト背景*/
         position: absolute;
@@ -1056,7 +1059,7 @@
         border: 2px solid rgba(0, 0, 0, 0.798);
         border-radius: 3px;
         height: 600px;
-        width: 1300px;
+        width: 130px;
     }
     .ABOUT .back_main h1{/*タイトルテキスト*/
         font-size: 60px;
@@ -1072,14 +1075,14 @@
         left: 60%;
         margin-top: -45px;
         padding: 0;
-        width: 400px;
+        width: 40px;
     }
     .ABOUT .back_main .about_text .t_1{/*テキスト内容*/
         font-size: 45px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
     }
     .ABOUT .back_main .about_text .t_2{/*テキスト日本語サイズ*/
-        font-size: 30px; 
+        font-size: 3px; 
     }
     .ABOUT .back_main .about_contents .contact_logo img{/*ロゴ位置*/
         position: relative;
