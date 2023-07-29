@@ -1138,7 +1138,7 @@
         margin-top: 20px;
         margin-left: 55px;
     }
-    .ABOUT .back_main .about_contents .contact_logo img:hover{/*ロゴ マウスホバー装飾*/
+    .ABOUT .back_main .about_contents .contact_logo img:active{/*ロゴ マウスホバー装飾*/
         height: 60px;
         width: 60px;
         margin-top: 10px;
@@ -1151,90 +1151,90 @@
     /*ホームアイコン*/
     .HOME_W img{
         position: fixed;
-        left: 94%;
+        top: 1%;
+        left: 76%;
+        width: 80px;
+        height: 80px;
         z-index: 1000;
-        width: 70px;
-        height: 70px;
-        background-color: rgb(255, 255, 255);
         border-radius:70%;
-        border: 5px solid rgb(0, 0, 0);
+        border: 2px solid rgb(0, 0, 0);
     }
     .HOME_W img:hover{
-        height: 80px;
-        width: 80px;
-        left: 93.5%;
+        height: 90px;
+        width: 90px;
+        left: 74.5%;
     }
     /*スケボー*/
     .WORKS_detail{
         position: relative;/*親要素にrelativeで親基準で小要素を配置できる*/
-        height: 100vh;
+        height: 800px;
     }
     .WORKS_detail .back_01{/*背景黄色*/
         position: absolute;
-        left: 2%;
-        top: 7%;
+        left: 4%;
+        top: 8%;
         z-index: -2;
         background-color: rgb(255, 255, 84, 0.759);
         border-radius: 5px;
-        height: 600px;
-        width: 1300px;
+        height: 650px;
+        width: 270px;
         background-image:radial-gradient(#afafaf74 20%, transparent 30%);
         background-size: 20px 20px;
     }
     .WORKS_detail .back_02{/*背景後ろ*/
         position: absolute;
-        left: 7%;
-        margin-top: 140px;
+        left: 22%;
+        top: 18%;
         z-index: -2;
         background-color: rgb(75, 72, 88);
         border-radius: 5px;
-        height: 600px;
-        width: 1300px;
+        height: 650px;
+        width: 280px;
     }
     .WORKS_detail .back_03{/*背景前*/
         position: absolute;
-        left: 5.5%;
-        margin-top: 120px;
+        left: 16%;
+        top: 15%;
         z-index: -2;
         background-color: rgb(232, 49, 49);
         border-radius: 5px;
-        height: 600px;
-        width: 1300px;
+        height: 650px;
+        width: 280px;
     }
     .WORKS_detail .back_main{/*テキスト背景*/
         position: absolute;
-        left: 3.5%;
-        top: 13%;
+        left: 10%;
+        top: 12%;
         z-index: 100;
         background-color: rgb(255, 255, 255);
         border: 2px solid rgba(0, 0, 0, 0.798);
         border-radius: 3px;
-        height: 600px;
-        width: 1300px;
+        height: 650px;
+        width: 280px;
     }
     .WORKS_detail .back_main h1{/*タイトルテキスト*/
-        font-size: 60px;
-        padding-bottom: 0;
+        font-size: 34px;
+        line-height: 90px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         text-align: center;
     }
     .WORKS_detail .back_main .detail_images{/*作品画像自動切り替え*/
         position: relative;
-        width: 850px;
-        height: 390px;
+        width: 270px;
+        height: 150px;
     }
     /*画像切り替え　土台用意*/
     .WORKS_detail .back_main .detail_images .d_images{
         position: absolute;
-        top: 0;
-        left: 5%;
+        top: 13%;
+        left: 3%;
         bottom: 0;
         right: 0;
         opacity: 0;
         border-radius: 8px;
         background-size: cover;
         background-position: center center;
-        animation: image2_animation 25s infinite;
+        animation: image_animation 25s infinite;
     }
     /*画像挿入*/
     .WORKS_detail .back_main .detail_images .w_detail1{
@@ -1277,14 +1277,13 @@
     }
     .WORKS_detail .back_main .Text_S{/*文字列全体*/
         position: absolute;
-        left: 70%;
-        top: 30%;
+        left: 13%;
+        top: 55%;
         display: flex;
         flex-flow: column;
-        line-height: 105px;
     }
     .WORKS_detail .back_main .Text_S{/*文字装飾*/
-        font-size: 40px;
+        font-size: 35px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         text-decoration: none;
         color: rgb(0, 0, 0);
@@ -1292,8 +1291,8 @@
     .WORKS_detail .back_main .Text_S2{
         font-size: 20px;
         position: absolute;
-        left: 85%;
-        top: 50%;
+        left: 30%;
+        top: 72%;
         display: flex;
         flex-flow: column;
     }
@@ -1301,22 +1300,21 @@
     /*アークリアクタ*/
     .WORKS_detail .back_main .detail_images2{/*作品画像自動切り替え*/
         position: relative;
-        z-index: 500;
-        width: 850px;
-        height: 390px;
+        width: 270px;
+        height: 150px;
     }
     /*画像切り替え　土台用意*/
     .WORKS_detail .back_main .detail_images2 .d2_images{
         position: absolute;
-        top: 0;
-        left: 5%;
+        top: 13%;
+        left: 3%;
         bottom: 0;
         right: 0;
         opacity: 0;
         border-radius: 8px;
         background-size: cover;
         background-position: center center;
-        animation: image3_animation 25s infinite;
+        animation: image_animation 25s infinite;
     }
     /*画像挿入*/
     .WORKS_detail .back_main .detail_images2 .w2_detail1{
@@ -1359,14 +1357,13 @@
     }
     .WORKS_detail .back_main .Text_A{/*文字列全体*/
         position: absolute;
-        left: 70%;
-        top: 30%;
+        left: 13%;
+        top: 55%;
         display: flex;
         flex-flow: column;
-        line-height: 105px;
     }
     .WORKS_detail .back_main .Text_A{/*文字装飾*/
-        font-size: 40px;
+        font-size: 35px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         text-decoration: none;
         color: rgb(0, 0, 0);
@@ -1374,8 +1371,8 @@
     .WORKS_detail .back_main .Text_A2{
         font-size: 20px;
         position: absolute;
-        left: 85%;
-        top: 50%;
+        left: 30%;
+        top: 72%;
         display: flex;
         flex-flow: column;
     }
@@ -1383,22 +1380,21 @@
     /*ライトセーバー*/
     .WORKS_detail .back_main .detail_images3{/*作品画像自動切り替え*/
         position: relative;
-        z-index: 500;
-        width: 850px;
-        height: 390px;
+        width: 270px;
+        height: 150px;
     }
     /*画像切り替え　土台用意*/
     .WORKS_detail .back_main .detail_images3 .d3_images{
         position: absolute;
-        top: 0;
-        left: 5%;
+        top: 13%;
+        left: 3%;
         bottom: 0;
         right: 0;
         opacity: 0;
         border-radius: 8px;
         background-size: cover;
         background-position: center center;
-        animation: image4_animation 30s infinite;
+        animation: image_animation 25s infinite;
     }
     /*画像挿入*/
     .WORKS_detail .back_main .detail_images3 .w3_detail1{
@@ -1447,14 +1443,13 @@
     }
     .WORKS_detail .back_main .Text_L{/*文字列全体*/
         position: absolute;
-        left: 70%;
-        top: 30%;
+        left: 13%;
+        top: 55%;
         display: flex;
         flex-flow: column;
-        line-height: 105px;
     }
     .WORKS_detail .back_main .Text_L{/*文字装飾*/
-        font-size: 40px;
+        font-size: 35px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         text-decoration: none;
         color: rgb(0, 0, 0);
@@ -1462,8 +1457,8 @@
     .WORKS_detail .back_main .Text_L2{
         font-size: 20px;
         position: absolute;
-        left: 85%;
-        top: 50%;
+        left: 30%;
+        top: 72%;
         display: flex;
         flex-flow: column;
     }
