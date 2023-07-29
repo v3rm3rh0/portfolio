@@ -753,8 +753,8 @@
     }
     .HERO .back_02{/*背景赤後ろ*/
         position: absolute;
-        left: 20%;
-        top: 16%;
+        left: 22%;
+        top: 18%;
         z-index: -2;
         background-color: rgb(255, 45, 68);
         border-radius: 5px;
@@ -763,8 +763,8 @@
     }
     .HERO .back_03{/*背景前*/
         position: absolute;
-        left: 15%;
-        top: 14%;
+        left: 16%;
+        top: 15%;
         z-index: -2;
         background-color: rgb(136, 45, 255);
         border-radius: 5px;
@@ -837,8 +837,8 @@
     }
     .WORKS .back_02{/*背景後ろ*/
         position: absolute;
-        left: 20%;
-        top: 16%;
+        left: 22%;
+        top: 18%;
         z-index: -2;
         background-color: rgb(75, 72, 88);
         border-radius: 5px;
@@ -847,8 +847,8 @@
     }
     .WORKS .back_03{/*背景前*/
         position: absolute;
-        left: 15%;
-        top: 14%;
+        left: 16%;
+        top: 15%;
         z-index: -2;
         background-color: rgb(232, 49, 49);
         border-radius: 5px;
@@ -955,53 +955,54 @@
     
     .SKILL{
         position: relative;/*親要素にrelativeで親基準で小要素を配置できる*/
-        min-height: 100vh;
+        min-height: 800px;
     }
     .SKILL .back_01{/*背景黄色*/
         position: absolute;
-        left: 2%;
-        top: 7%;
+        left: 4%;
+        top: 8%;
         z-index: -2;
         background-color: rgb(255, 255, 84, 0.759);
         border-radius: 5px;
-        height: 600px;
-        width: 130px;
+        height: 650px;
+        width: 270px;
         background-image:radial-gradient(#afafaf74 20%, transparent 30%);
         background-size: 20px 20px;
     }
     .SKILL .back_02{/*背景後ろ*/
         position: absolute;
-        left: 7%;
-        margin-top: 140px;
+        left: 22%;
+        top: 18%;
         z-index: -2;
         background-color: rgb(52, 147, 171);
         border-radius: 5px;
-        height: 600px;
-        width: 130px;
+        height: 650px;
+        width: 280px;
     }
     .SKILL .back_03{/*背景前*/
         position: absolute;
-        left: 5.5%;
-        margin-top: 120px;
+        left: 16%;
+        top: 15%;
         z-index: -2;
         background-color: rgb(253, 158, 34);
         border-radius: 5px;
-        height: 600px;
-        width: 130px;
+        height: 650px;
+        width: 280px;
     }
     .SKILL .back_main{/*テキスト背景*/
         position: absolute;
-        left: 3.5%;
-        top: 13%;
+        left: 10%;
+        top: 12%;
         z-index: 100;
         background-color: rgb(255, 255, 255);
         border: 2px solid rgba(0, 0, 0, 0.798);
         border-radius: 3px;
-        height: 600px;
-        width: 100px;
+        height: 650px;
+        width: 280px;
     }
     .SKILL .back_main h1{/*タイトルテキスト*/
         font-size: 60px;
+        line-height: 80px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         text-align: center;
     }
@@ -1010,17 +1011,46 @@
         position: relative;
         
     }
-    .SKILL .back_main .skill_02{/*テキスト上段間隔*/
-        padding: 0 12em;
+    .SKILL .back_main .skill_01{/*ロゴ1位置*/
+        position: relative;
+        left: 8%;
     }
-    .SKILL .back_main .skill_text2/*画像下段*/{
-        position: absolute;
-        
+    .SKILL .back_main .skill_01 img{
+        width: 70px;
+        height: 70px;
     }
-    .SKILL .back_main .skill_text2 img{/*画像下段間隔*/
-        
+    .SKILL .back_main .skill_02{/*ロゴ2位置*/
+        position: relative;
+        left: 60%;
     }
-    
+    .SKILL .back_main .skill_02 .text2{/*ロゴ2テキスト位置*/
+        position: relative;
+        left: -32%;
+    }
+    .SKILL .back_main .skill_02 img{
+        width: 70px;
+        height: 70px;
+    }
+    .SKILL .back_main .skill_03{/*ロゴ3位置*/
+        position: relative;
+        left: 8%;
+    }
+    .SKILL .back_main .skill_03 img{
+        width: 70px;
+        height: 70px;
+    }
+    .SKILL .back_main .skill_text2 img{/*ロゴ下段間隔*/
+        position: relative;
+        width: 50px;
+        height: 50px;
+        margin-left: 20px;
+    }
+    .SKILL .back_main .skill_text2{
+        position: relative;
+        left: 6%;
+        top: 2%;
+    }
+
     .ABOUT{
         position: relative;/*親要素にrelativeで親基準で小要素を配置できる*/
         min-height: 100vh;
