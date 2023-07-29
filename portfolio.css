@@ -166,7 +166,7 @@ html { scroll-behavior: smooth;}
     border-radius: 8px;
     background-size: cover;
     background-position: center center;
-    animation: image_animation 30s infinite;
+    animation: image_animation 25s infinite;
 }
 /*画像挿入*/
 .WORKS .back_main .works_images .w1{
@@ -179,14 +179,12 @@ html { scroll-behavior: smooth;}
     background-image: url(work_images/portfolio_3-4.png);
 }
 .WORKS .back_main .works_images .w4{
-    background-image: url(work_images/portfolio_4-1.png);
-}
-.WORKS .back_main .works_images .w5{
     background-image: url(work_images/kari1.jpeg);
 }
-.WORKS .back_main .works_images .w6{
+.WORKS .back_main .works_images .w5{
     background-image: url(work_images/kari2.jpeg);
 }
+
 @keyframes image_animation{/*切り替えトランジッション*/
     0%{ opacity: 0;}
     5%{ opacity: 1;}
@@ -210,9 +208,6 @@ html { scroll-behavior: smooth;}
 }
 .WORKS .back_main .works_images .image:nth-of-type(5){
     animation-delay: 20s;
-}
-.WORKS .back_main .works_images .image:nth-of-type(6){
-    animation-delay: 25s;
 }
 .WORKS .back_main .work_text{/*文字列全体*/
     position: absolute;
@@ -367,6 +362,8 @@ html { scroll-behavior: smooth;}
     position: relative;
     left: 60%;
     margin-top: -45px;
+    padding: 0;
+    width: 400px;
 }
 .ABOUT .back_main .about_text .t_1{/*テキスト内容*/
     font-size: 45px;
@@ -386,7 +383,7 @@ html { scroll-behavior: smooth;}
 
 .WORKS_detail{
     position: relative;/*親要素にrelativeで親基準で小要素を配置できる*/
-    min-height: 100vh;
+    height: 100vh;
 }
 .WORKS_detail .back_01{/*背景黄色*/
     position: absolute;
@@ -430,4 +427,25 @@ html { scroll-behavior: smooth;}
     border-radius: 3px;
     height: 600px;
     width: 1300px;
+}
+.WORKS_detail .back_main h1{/*タイトルテキスト*/
+    font-size: 60px;
+    padding-bottom: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+.WORKS_detail .back_main .w_detail1{/*作品画像クリック切り替え*/
+    position: relative;
+    z-index: 500;
+    width: 700px;
+    height: 350px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.WORKS_detail .back_main .w_detail1{
+    background-image: url('work_images/kari1.jpeg');
+}
+.WORKS_detail .back_main .w_detail1:active{
+    background-image: url('work_images/kari2.jpeg');
 }
