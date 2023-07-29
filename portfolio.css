@@ -729,7 +729,7 @@
         border-radius:70%;
         border: 2px solid rgb(0, 0, 0);
     }
-    .HOME img:hover{
+    .HOME img:active{
         height: 90px;
         width: 90px;
         left: 74.5%;
@@ -737,12 +737,12 @@
     
     /*トップページ*/
     .HERO{
-        min-height: 850px;
+        min-height: 800px;
     }
     .HERO .back_01{/*背景黄色*/
         position: absolute;
         left: 4%;
-        top: 7%;
+        top: 8%;
         z-index: -2;
         background-color: rgb(255, 255, 84, 0.759);
         border-radius: 5px;
@@ -754,33 +754,33 @@
     .HERO .back_02{/*背景赤後ろ*/
         position: absolute;
         left: 20%;
-        top: 15%;
+        top: 16%;
         z-index: -2;
         background-color: rgb(255, 45, 68);
         border-radius: 5px;
         height: 650px;
-        width: 270px;
+        width: 280px;
     }
     .HERO .back_03{/*背景前*/
         position: absolute;
         left: 15%;
-        top: 13%;
+        top: 14%;
         z-index: -2;
         background-color: rgb(136, 45, 255);
         border-radius: 5px;
         height: 650px;
-        width: 270px;
+        width: 280px;
     }
     .HERO .back_main{/*テキスト背景*/
         position: absolute;
         left: 10%;
-        top: 11%;
+        top: 12%;
         z-index: 100;
         background-color: rgb(255, 255, 255);
         border: 2px solid rgba(0, 0, 0, 0.798);
         border-radius: 3px;
         height: 650px;
-        width: 270px;
+        width: 280px;
     }
     .HERO .back_main h1{/*タイトルテキスト*/
         font-size: 38px;
@@ -789,10 +789,10 @@
         text-align: center;
     }
     .HERO .back_main img{/*ロゴ*/
-        width: 150px;
-        height: 150px;
+        width: 170px;
+        height: 170px;
         position: absolute;
-        left: 21%;
+        left: 19%;
         border: 1.5px solid rgb(0, 0, 0);
         border-radius: 20%;
     }
@@ -813,7 +813,7 @@
     .HERO .back_main a:visited{/*訪問後文字色*/
         color: rgb(0, 0, 0);
     }
-    .HERO .back_main a:hover{/*マウスホバー装飾*/
+    .HERO .back_main a:active{/*マウスホバー装飾*/
        color: rgb(255, 255, 255);
        text-shadow: 2px 2px 2px rgb(0, 0, 0);
     }
@@ -821,67 +821,67 @@
     
     .WORKS{
         position: relative;/*親要素にrelativeで親基準で小要素を配置できる*/
-        min-height: 100vh;
+        min-height: 800px;
     }
     .WORKS .back_01{/*背景黄色*/
         position: absolute;
-        left: 2%;
-        top: 7%;
+        left: 4%;
+        top: 8%;
         z-index: -2;
         background-color: rgb(255, 255, 84, 0.759);
         border-radius: 5px;
-        height: 600px;
-        width: 130px;
+        height: 650px;
+        width: 270px;
         background-image:radial-gradient(#afafaf74 20%, transparent 30%);
         background-size: 20px 20px;
     }
     .WORKS .back_02{/*背景後ろ*/
         position: absolute;
-        left: 7%;
-        margin-top: 140px;
+        left: 20%;
+        top: 16%;
         z-index: -2;
         background-color: rgb(75, 72, 88);
         border-radius: 5px;
-        height: 600px;
-        width: 100px;
+        height: 650px;
+        width: 280px;
     }
     .WORKS .back_03{/*背景前*/
         position: absolute;
-        left: 5.5%;
-        margin-top: 120px;
+        left: 15%;
+        top: 14%;
         z-index: -2;
         background-color: rgb(232, 49, 49);
         border-radius: 5px;
-        height: 600px;
-        width: 100px;
+        height: 650px;
+        width: 280px;
     }
     .WORKS .back_main{/*テキスト背景*/
         position: absolute;
-        left: 3.5%;
-        top: 13%;
+        left: 10%;
+        top: 12%;
         z-index: 100;
         background-color: rgb(255, 255, 255);
         border: 2px solid rgba(0, 0, 0, 0.798);
         border-radius: 3px;
-        height: 600px;
-        width: 130px;
+        height: 650px;
+        width: 280px;
     }
     .WORKS .back_main h1{/*タイトルテキスト*/
-        font-size: 60px;
-        padding-bottom: 0;
+        font-size: 38px;
+        line-height: 90px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         text-align: center;
     }
     .WORKS .back_main .works_images{/*作品画像自動切り替え*/
         position: relative;
-        width: 70px;
-        height: 350px;
+        width: 270px;
+        height: 150px;
     }
     /*画像切り替え　土台用意*/
     .WORKS .back_main .works_images .image{
         position: absolute;
         top: 0;
-        left: 10%;
+        left: 3%;
         bottom: 0;
         right: 0;
         opacity: 0;
@@ -932,14 +932,14 @@
     }
     .WORKS .back_main .work_text{/*文字列全体*/
         position: absolute;
-        left: 70%;
-        top: 30%;
+        left: 13%;
+        top: 45%;
         display: flex;
         flex-flow: column;
         line-height: 105px;
     }
     .WORKS .back_main .work_text a{/*文字装飾*/
-        font-size: 50px;
+        font-size: 45px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         text-decoration: none;
         color: rgb(0, 0, 0);
@@ -947,7 +947,7 @@
     .WORKS .back_main a:visited{/*訪問後文字色*/
         color: rgb(0, 0, 0);
     }
-    .WORKS .back_main a:hover{/*マウスホバー装飾*/
+    .WORKS .back_main a:active{/*マウスホバー装飾*/
        color: rgb(255, 255, 255);
        text-shadow: 2px 2px 2px rgb(0, 0, 0);
     }
