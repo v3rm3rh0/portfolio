@@ -528,8 +528,8 @@
     .WORKS_detail .back_main .Text_S2{
         font-size: 20px;
         position: absolute;
-        left: 85%;
-        top: 50%;
+        left: 70%;
+        top: 55%;
         display: flex;
         flex-flow: column;
     }
@@ -1357,15 +1357,7 @@
     .WORKS_detail .back_main .detail_images2 .d2_images:nth-of-type(5){
         animation-delay: 20s;
     }
-    .WORKS_detail .back_main .Text_A2{
-        font-size: 20px;
-        position: absolute;
-        width: 340px;
-        left: 70%;
-        top: 55%;
-        display: flex;
-        flex-flow: column;
-    }
+
     
     /*ライトセーバー*/
     .WORKS_detail .back_main .detail_images3{/*作品画像自動切り替え*/
