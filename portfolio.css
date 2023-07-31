@@ -1279,13 +1279,13 @@
     }
     .WORKS_detail .back_main .Text_S{/*文字列全体*/
         position: absolute;
-        left: 13%;
-        top: 55%;
+        left: 2%;
+        top: 45%;
         display: flex;
         flex-flow: column;
     }
     .WORKS_detail .back_main .Text_S{/*文字装飾*/
-        font-size: 35px;
+        font-size: 30px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         text-decoration: none;
         color: rgb(0, 0, 0);
@@ -1293,8 +1293,8 @@
     .WORKS_detail .back_main .Text_S2{
         font-size: 20px;
         position: absolute;
-        left: 30%;
-        top: 72%;
+        left: 10%;
+        top: 60%;
         display: flex;
         flex-flow: column;
     }
@@ -1358,6 +1358,23 @@
         animation-delay: 20s;
     }
 
+    .WORKS_detail .back_main .Text_A{/*文字装飾*/
+        font-size: 30px;
+        margin-left: 10px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-decoration: none;
+        line-height: 110px;
+        color: rgb(0, 0, 0);
+    }
+    .WORKS_detail .back_main .Text_A2{
+        font-size: 18px;
+        position: absolute;
+        width: 250px;
+        margin-left: 10px;
+        top: 55%;
+        display: flex;
+        flex-flow: column;
+    }
     
     /*ライトセーバー*/
     .WORKS_detail .back_main .detail_images3{/*作品画像自動切り替え*/
@@ -1425,22 +1442,23 @@
     }
     .WORKS_detail .back_main .Text_L{/*文字列全体*/
         position: absolute;
-        left: 13%;
-        top: 55%;
+        left: 3%;
+        top: 45%;
         display: flex;
         flex-flow: column;
     }
     .WORKS_detail .back_main .Text_L{/*文字装飾*/
-        font-size: 35px;
+        font-size: 30px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         text-decoration: none;
         color: rgb(0, 0, 0);
     }
     .WORKS_detail .back_main .Text_L2{
-        font-size: 20px;
+        font-size: 17px;
         position: absolute;
-        left: 30%;
-        top: 72%;
+        left: 7%;
+        width: 250px;
+        top: 60%;
         display: flex;
         flex-flow: column;
     }
