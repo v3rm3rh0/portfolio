@@ -610,9 +610,9 @@
     .WORKS_detail .back_main .Text_A2{
         font-size: 20px;
         position: absolute;
+        width: 340px;
         left: 70%;
         top: 55%;
-        width: 340px;
         display: flex;
         flex-flow: column;
     }
